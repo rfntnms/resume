@@ -1,130 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rifqi Rofian Tanamas - CV</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 20px;
-            }
+<head>
+  <meta charset="UTF-8">
+  <title>Rifqi Rofian Tanamas - Cybersecurity Professional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: linear-gradient(135deg, #13131a 0%, #23243a 100%);
+      min-height: 100vh;
+    }
+    .neon {
+      color: #00ffc3;
+      text-shadow:
+        0 0 5px #00ffc3,
+        0 0 10px #00ffc3,
+        0 0 20px #00ffc3,
+        0 0 40px #00ffc3;
+    }
+    .card-glow {
+      box-shadow: 0 2px 24px 0 #00ffc366, 0 1.5px 0 0 #2e2e38;
+      border: 1.5px solid #222336;
+      background: linear-gradient(135deg, #181926cc 60%, #23243add 100%);
+      border-radius: 1rem;
+      backdrop-filter: blur(4px);
+    }
+    ::selection {
+      background: #00ffc344;
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  <div class="max-w-4xl mx-auto my-10 px-4">
+    <!-- Header with Profile Picture -->
+    <div class="card-glow px-8 py-7 mb-7 flex flex-col md:flex-row md:items-center md:justify-between border-b-2 border-[#00ffc366]">
+      <div class="flex items-center gap-6">
+        <!-- Profile Picture -->
+        <div class="shrink-0">
+          <img 
+            src="https://randomuser.me/api/portraits/men/32.jpg" 
+            alt="Profile Picture"
+            class="w-28 h-28 rounded-full border-4 border-[#00ffc3] shadow-lg object-cover bg-gray-800"
+          >
+        </div>
+        <!-- Name and Title -->
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold neon mb-2 tracking-widest">Rifqi Rofian Tanamas</h1>
+          <p class="text-lg font-semibold text-[#00ffc3] uppercase tracking-wider">Cybersecurity Professional</p>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div class="mt-7 md:mt-0 text-sm space-y-1 text-[#c0fdf5]">
+        <div class="flex items-center gap-2"><span class="text-[#00ffc3]">⌂</span> Tangerang, Indonesia</div>
+        <div class="flex items-center gap-2"><span class="text-[#00ffc3]">✆</span> +62 895-6357-57579</div>
+        <div class="flex items-center gap-2"><span class="text-[#00ffc3]">@</span> <a href="mailto:rifqirofian@gmail.com" class="underline hover:text-[#00ffc3]">rifqirofian@gmail.com</a></div>
+        <div class="flex items-center gap-2"><span class="text-[#00ffc3]">in</span> <a href="https://linkedin.com/in/rifqirofian" class="underline hover:text-[#00ffc3]" target="_blank">linkedin.com/in/rifqirofian</a></div>
+      </div>
+    </div>
 
-            h1, h2 {
-                margin-bottom: 5px;
-            }
+    <!-- Summary -->
+    <section class="card-glow px-7 py-6 mb-7">
+      <h2 class="text-xl font-bold neon mb-2 tracking-wide">Summary</h2>
+      <p class="text-gray-200 leading-relaxed">
+        Cybersecurity professional with 3+ years of progressive experience in SOC operations, incident response, and security automation. Proven in leading cross-functional teams, developing Splunk use cases, optimizing threat detection, and ensuring SLA adherence in enterprise security environments. Experienced in delivering IT security projects across government and financial sectors, including AV deployment, SIEM integration, and threat monitoring. Strong foundation in CSIRT principles, audit response, and aligning technical outcomes with business requirements.
+      </p>
+    </section>
 
-            .section {
-                margin-bottom: 20px;
-            }
+    <!-- Experience -->
+    <section class="card-glow px-7 py-6 mb-7">
+      <h2 class="text-xl font-bold neon mb-4 tracking-wide">Experience</h2>
+      <div class="space-y-7">
+        <div>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <span class="font-bold text-[#00ffc3]">Lead Technical (Cybersecurity)</span>
+            <span class="italic text-xs text-[#c0fdf5]">Focus Solusi Infotama – Jakarta, Indonesia | Jul 2024 – Present</span>
+          </div>
+          <ul class="list-disc ml-7 mt-2 text-gray-300 space-y-1">
+            <li>Led a 7-person L1 SOC team, providing operational direction, mentoring, and conflict resolution.</li>
+            <li>Developed Python-based automation tools, reducing analyst error and increasing blocking accuracy by 70%.</li>
+            <li>Created and refined Spl dashboards, reducing false positives by 90% and improving response time.</li>
+            <li>Handled complex incidents as L2 Analyst and provided escalation support.</li>
+            <li>Led Bitdefender AV deployment across 2,850 endpoints with a 4-person team.</li>
+            <li>Acted as a bridge between client and vendor, aligning technical deliverables and project goals.</li>
+            <li><span class="text-[#00ffc3]">Tools:</span> Splunk, CrowdStrike, ExtraHop, Ixia ThreatArmor, Bitdefender, Python, Jira, Excel.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <span class="font-bold text-[#00ffc3]">IT Security Engineer</span>
+            <span class="italic text-xs text-[#c0fdf5]">PT. CIMB Niaga Finance – Jakarta, Indonesia | Apr 2024 – Present</span>
+          </div>
+          <ul class="list-disc ml-7 mt-2 text-gray-300 space-y-1">
+            <li>Operated antivirus platforms (PandaSecurity, SentinelOne, Kaspersky).</li>
+            <li>Provided VPN support, password resets, and privileged access reviews (CyberArk).</li>
+            <li>Supported daily AD operations and GPO checks.</li>
+            <li><span class="text-[#00ffc3]">Tools:</span> CyberArk, VPN, Active Directory.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <span class="font-bold text-[#00ffc3]">Cybersecurity Engineer</span>
+            <span class="italic text-xs text-[#c0fdf5]">PT Alpha Citra Siber Indonesia – Jakarta, Indonesia | Jun 2023 – Apr 2024</span>
+          </div>
+          <ul class="list-disc ml-7 mt-2 text-gray-300 space-y-1">
+            <li>Monitored and triaged ~20 incidents weekly across 3 client environments via SIEM (Splunk, QRadar, Wazuh).</li>
+            <li>Enhanced detection logic, improving alert accuracy and reducing escalations.</li>
+            <li>Collaborated with admins and vendors for threat mitigation.</li>
+            <li>Contributed to Splunk documentation and knowledge base.</li>
+            <li><span class="text-[#00ffc3]">Tools:</span> Wazuh, Splunk, QRadar, Jira, SentinelOne.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <span class="font-bold text-[#00ffc3]">IT Support Technician</span>
+            <span class="italic text-xs text-[#c0fdf5]">Universitas Multimedia Nusantara – Tangerang, Indonesia | Jul 2019 – Jun 2023</span>
+          </div>
+          <ul class="list-disc ml-7 mt-2 text-gray-300 space-y-1">
+            <li>Provided desktop support, system maintenance, and virus protection updates.</li>
+            <li>Diagnosed hardware/software issues and managed user accounts securely.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            .section-title {
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
+    <!-- Projects -->
+    <section class="card-glow px-7 py-6 mb-7">
+      <h2 class="text-xl font-bold neon mb-4 tracking-wide">Selected Projects</h2>
+      <ul class="space-y-4">
+        <li>
+          <span class="font-semibold text-[#00ffc3]">Antivirus Deployment – BPS (2024):</span>
+          Project Leader for Bitdefender deployment across 2,850 endpoints at Badan Pusat Statistik. Managed team, ensured SLA compliance, minimized disruption, and delivered hands-on training.
+        </li>
+        <li>
+          <span class="font-semibold text-[#00ffc3]">SOC Automation & Dashboarding – DJBC (2024):</span>
+          Technical advisor and implementer for Python-based automation scripts and Splunk dashboards at DJBC. Developed use cases and optimized false positive handling by 90%.
+        </li>
+        <li>
+          <span class="font-semibold text-[#00ffc3]">Multi-Client SIEM Operations – ACSI (2023–2024):</span>
+          SOC L1 Analyst for real-time monitoring and triage of 20+ weekly incidents across 3 managed clients. Documented alert standards to support CSIRT operations.
+        </li>
+      </ul>
+    </section>
 
-            .job-title {
-                font-weight: bold;
-            }
+    <!-- Education & Certifications -->
+    <section class="card-glow px-7 py-6 mb-7">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Education -->
+        <div>
+          <h2 class="text-xl font-bold neon mb-2 tracking-wide">Education</h2>
+          <ul class="mb-2">
+            <li>
+              <span class="font-bold text-[#00ffc3]">Nusa Mandiri University, Jakarta</span><br>
+              <span class="text-gray-200">Bachelor's Degree – Information Systems, GPA: 3.67 (2021–2023)</span>
+            </li>
+            <li class="mt-3">
+              <span class="font-bold text-[#00ffc3]">Bina Sarana Informatika University, Jakarta</span><br>
+              <span class="text-gray-200">Associate Degree – Information Systems, GPA: 3.72 (2018–2021)</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Certifications -->
+        <div>
+          <h2 class="text-xl font-bold neon mb-2 tracking-wide">Certifications</h2>
+          <ul class="text-gray-200 list-disc ml-7">
+            <li>CompTIA CySA+ (Cybersecurity Analyst)</li>
+            <li>ISO/IEC 27001 Information Security Associate™ – SkillFront</li>
+            <li>Cybersecurity Engineer – Digitalent</li>
+            <li>Fundamental Web Security – BelajarSiber</li>
+            <li>CyberArk Level 1 Trustee</li>
+            <li>IBM Cybersecurity Fundamentals</li>
+            <li>Google IT Support Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            .date {
-                font-style: italic;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <h1>Rifqi Rofian Tanamas</h1>
-            <p>Security Analyst</p>
-            <p>Tangerang, 15811 | 0895635757579 | rifqirofian@gmail.com | <a href="https://www.linkedin.com/in/rifqirofian">LinkedIn</a></p>
-        </header>
-
-        <section class="section">
-            <h2 class="section-title">Summary</h2>
-            <p>
-                Accomplished IT Support Technician with over 3 years of hands-on experience in delivering comprehensive technical support and proficiently troubleshooting diverse software and hardware challenges. Demonstrated expertise spans computer systems and networks, penetration testing, bash scripting, meticulous problem-solving, adept technical report writing, and documentation. Strong communicator known for exceptional customer service, adept at collaborating across teams to ensure streamlined operations and fortified security protocols..
-            </p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="job">
-                <h3 class="job-title">Cybersecurity Engineer - PT. Alpha Citra Siber Indonesia</h3>
-                <p class="date">(June 2023 – Present)</p>
-                <ul>
-                    <li>Coordinate SIEM development plans in collaboration with in-house technical teams</li>
-                    <li>Monitor, analyze and respond to security events from a variety of SEIM data sources.</li>
-                    <li>Triage security alerts from a variety of sources including network devices, servers, end users, threat intelligence services.</li>
-                    <li>Analyze and investigate cyber events using various logs including email, firewall, endpoint, IDS/IPS, and other network devices in an enterprise security information and event management (SIEM).</li>
-                    <li>Work with end users or system administrators and various vendors to mitigate security incidents.</li>
-                    <li>Staying up to date with current vulnerabilities, attacks, and countermeasures.</li>
-                    <li>Escalated open ticket to Tier II or Tier III after eliminating false positives.</li>
-                    <li>Document all activities during an incident and provide leadership with status updates during the life cycle of the incident.</li>
-                    <li>Make daily, weekly and monthly report.</li>
-                    <li>Do monitoring in 24x7 shift</li>
-                    <li>Perform other duties as assigned.</li>
-                </ul>
-
-                <h3 class="job-title">IT Support Technician - Universitas Multimedia Nusantara</h3>
-                <p class="date">(July 2019 – June 2023)</p>
-                <ul>
-                    <li>Provided desktop support to end-users by responding to requests for technical assistance.</li>
-                    <li>Performed preventive maintenance and upgraded systems to improve network, system and data availability and integrity.</li>
-                    <li>Diagnosed and resolved technical hardware and software issues.</li>
-                    <li>Installed computer peripherals for end users.</li>
-                    <li>Updated virus protection systems based on computer virus reports.</li>
-                    <li>Managed user identities, credentials, and privileges on local servers</li>
-                    <li>Configured systems in accordance with system security policy.</li>
-                    <li>Conducted record searches and coordinated with other units on procedural problems involving complex cases.</li>
-                    <li>Monitored and maintained client computers and network infrastructure to ensure optimal performance, reliability, and security</li>
-                    <li>Generated reports using statistical software in response to user requests.</li>
-                    <li>Performed other duties as assigned.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="education">
-                <h3>Nusa Mandiri University (2021 - 2023)</h3>
-                <p>Bachelor's Degree - Information System</p>
-                <p>GPA: 3.67</p>
-            </div>
-            <div class="education">
-                <h3>Bina Sarana Informatika University (2018 - 2021)</h3>
-                <p>Associate degree - Information System</p>
-                <p>GPA: 3.72</p>
-            </div>
-            <div class="education">
-                <h3>Informal Education</h3>
-                <p>Digitalent – Cybersecurity Technician (2022)</p>
-                <p>BelajarSiber – Fundamental Web Security (2022)</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Certifications</h2>
-            <ul>
-                <li>Skillfront - ISO/IEC 27001 Information Security Associate™</li>
-                <li>Digitalent – Cybersecurity Engineer</li>
-                <li>Belajarsiber – Fundamental Web Security</li>
-                <li>CyberArk – Level 1 Trustee Exam</li>
-                <li>IBM – Cybersecurity Fundamental</li>
-                <li>Google – Technical Support Fundamental</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Skills</h2>
-            <p>
-            Skills/Core Competencies:
-            <!-- Add your skills and competencies details -->
-            </p>
-            <p>
-            Security & Computer Forensics Tool:
-            <!-- Add your security and tool details -->
-            </p>
-        </section>
-    </body>
+    <!-- Skills -->
+    <section class="card-glow px-7 py-6">
+      <h2 class="text-xl font-bold neon mb-3 tracking-wide">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-[#00ffc3] mb-2">Technical</h3>
+          <ul class="list-disc ml-7 text-gray-200">
+            <li><span class="font-medium text-[#00ffc3]">SIEM:</span> Splunk, QRadar, Wazuh</li>
+            <li><span class="font-medium text-[#00ffc3]">Endpoint Security:</span> SentinelOne, PandaSecurity, Kaspersky, Bitdefender, CrowdStrike, TrendMicro</li>
+            <li><span class="font-medium text-[#00ffc3]">Scripting:</span> Python, Bash (basic)</li>
+            <li><span class="font-medium text-[#00ffc3]">Platforms:</span> Windows Server/PC, Linux, iOS</li>
+            <li><span class="font-medium text-[#00ffc3]">Identity & Access:</span> Active Directory, CyberArk</li>
+            <li><span class="font-medium text-[#00ffc3]">Networking:</span> VPN, IDS/IPS, Incident Response</li>
+            <li><span class="font-medium text-[#00ffc3]">Tools:</span> Jira, Excel, Git</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-[#00ffc3] mb-2">Soft Skills</h3>
+          <ul class="list-disc ml-7 text-gray-200">
+            <li>Technical Leadership & Mentoring</li>
+            <li>Cross-functional Communication</li>
+            <li>Incident Response Coordination</li>
+            <li>Project Management</li>
+            <li>Knowledge Transfer & Training</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="mt-12 mb-6 text-center text-[#00ffc3] text-xs tracking-widest opacity-80">
+    &copy; 2024 Rifqi Rofian Tanamas
+  </footer>
+</body>
 </html>
