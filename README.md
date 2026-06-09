@@ -1,64 +1,44 @@
-Rifqi Rofian Tanamas
-Security Analyst
+# Rifqi Rofian Tanamas — Cybersecurity Portfolio
 
-Tangerang, 15811 | 0895635757579 | rifqirofian@gmail.com | LinkedIn
+Minimalist portfolio website showcasing cybersecurity experience, skills, and projects.
 
-Summary
-Accomplished IT Support Technician with over 3 years of hands-on experience in delivering comprehensive technical support and proficiently troubleshooting diverse software and hardware challenges. Demonstrated expertise spans computer systems and networks, penetration testing, bash scripting, meticulous problem-solving, adept technical report writing, and documentation. Strong communicator known for exceptional customer service, adept at collaborating across teams to ensure streamlined operations and fortified security protocols..
+**Live:** [buburtech.com](https://buburtech.com)
 
-Experience
-Cybersecurity Engineer - PT. Alpha Citra Siber Indonesia
-(June 2023 – Present)
+## Tech Stack
 
-Coordinate SIEM development plans in collaboration with in-house technical teams
-Monitor, analyze and respond to security events from a variety of SEIM data sources.
-Triage security alerts from a variety of sources including network devices, servers, end users, threat intelligence services.
-Analyze and investigate cyber events using various logs including email, firewall, endpoint, IDS/IPS, and other network devices in an enterprise security information and event management (SIEM).
-Work with end users or system administrators and various vendors to mitigate security incidents.
-Staying up to date with current vulnerabilities, attacks, and countermeasures.
-Escalated open ticket to Tier II or Tier III after eliminating false positives.
-Document all activities during an incident and provide leadership with status updates during the life cycle of the incident.
-Make daily, weekly and monthly report.
-Do monitoring in 24x7 shift
-Perform other duties as assigned.
-IT Support Technician - Universitas Multimedia Nusantara
-(July 2019 – June 2023)
+- HTML5 + Tailwind CSS (CDN) + Vanilla JavaScript
+- Google Fonts: Playfair Display, Inter, JetBrains Mono
+- GitHub Pages
 
-Provided desktop support to end-users by responding to requests for technical assistance.
-Performed preventive maintenance and upgraded systems to improve network, system and data availability and integrity.
-Diagnosed and resolved technical hardware and software issues.
-Installed computer peripherals for end users.
-Updated virus protection systems based on computer virus reports.
-Managed user identities, credentials, and privileges on local servers
-Configured systems in accordance with system security policy.
-Conducted record searches and coordinated with other units on procedural problems involving complex cases.
-Monitored and maintained client computers and network infrastructure to ensure optimal performance, reliability, and security
-Generated reports using statistical software in response to user requests.
-Performed other duties as assigned.
-Education
-Nusa Mandiri University (2021 - 2023)
-Bachelor's Degree - Information System
+## Structure
 
-GPA: 3.67
+```
+.
+├── index.html      # Main page — all sections
+├── styles.css      # Custom styles (Tailwind utilities + component classes)
+├── scripts.js      # Scroll reveal, counters, nav behavior
+├── foto.jpg        # Profile photo
+├── CNAME           # Custom domain config
+└── README.md
+```
 
-Bina Sarana Informatika University (2018 - 2021)
-Associate degree - Information System
+## Sections
 
-GPA: 3.72
+- Hero — Name, role, summary, CTA buttons, tech chips
+- About — Bio + key metrics (3yr, 2850 endpoints, 90% FP reduction)
+- Experience — 4 roles: Focus Solusi Infotama, CIMB Niaga, ACSI, UMN
+- Projects — BPS AV deployment, DJBC SOC automation, ACSI multi-client SIEM
+- Skills — SIEM, endpoint, IR, automation, leadership
+- Certifications & Education — 7 certs, 2 degrees
+- Contact — Email, LinkedIn, phone
 
-Informal Education
-Digitalent – Cybersecurity Technician (2022)
+## Local Development
 
-BelajarSiber – Fundamental Web Security (2022)
+```bash
+# No build step — just open index.html or serve locally
+python3 -m http.server 8080
+```
 
-Certifications
-Skillfront - ISO/IEC 27001 Information Security Associate™
-Digitalent – Cybersecurity Engineer
-Belajarsiber – Fundamental Web Security
-CyberArk – Level 1 Trustee Exam
-IBM – Cybersecurity Fundamental
-Google – Technical Support Fundamental
-Skills
-Skills/Core Competencies:
+## License
 
-Security & Computer Forensics Tool:
+Personal portfolio. Not licensed for reuse.
