@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Rifqi Rofian Tanamas — Cybersecurity Professional. SOC operations, incident response, SIEM engineering, and security automation." />
   <meta name="author" content="Rifqi Rofian Tanamas" />
-  <meta name="theme-color" content="#05070d" />
+  <meta name="theme-color" content="#FAFAF8" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
@@ -13,13 +13,13 @@
   <meta property="og:description" content="SOC Lead · Incident Response · SIEM Engineering · Security Automation" />
   <meta property="og:image" content="foto.jpg" />
 
-  <title>Rifqi Rofian Tanamas // Cybersecurity Portfolio</title>
+  <title>Rifqi Rofian Tanamas — Cybersecurity Portfolio</title>
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23050a10'/><path d='M32 8 L54 18 V34 C54 46 44 54 32 58 C20 54 10 46 10 34 V18 Z' fill='none' stroke='%2300ffc3' stroke-width='3'/><path d='M22 32 L30 40 L44 24' fill='none' stroke='%2300ffc3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23111111'/><path d='M32 8 L54 18 V34 C54 46 44 54 32 58 C20 54 10 46 10 34 V18 Z' fill='none' stroke='%23B8A38A' stroke-width='3'/><path d='M22 32 L30 40 L44 24' fill='none' stroke='%23B8A38A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Share+Tech+Mono&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -27,386 +27,181 @@
       theme: {
         extend: {
           colors: {
-            cyber: {
-              bg: '#05070d',
-              panel: '#0b0f18',
-              line: '#132133',
-              primary: '#00ffc3',
-              accent: '#22d3ee',
-              magenta: '#ff3dac',
-              amber: '#ffb020',
-              red: '#ff5370',
-              muted: '#8aa0b4',
+            neutral: {
+              50: '#FAFAF8',
+              100: '#F5F4F0',
+              150: '#EFEDEA',
+              200: '#E5E1DA',
+              300: '#D1CCC4',
+              400: '#B0A899',
+              500: '#8A8278',
+              600: '#5F5A52',
+              700: '#3D3A35',
+              800: '#262420',
+              900: '#111111',
+            },
+            accent: {
+              DEFAULT: '#B8A38A',
+              light: '#C6B49A',
+              dark: '#9C8772',
+              muted: '#D4C8B8',
             },
           },
           fontFamily: {
-            mono: ['"JetBrains Mono"', '"Share Tech Mono"', 'ui-monospace', 'monospace'],
-            display: ['"Share Tech Mono"', '"JetBrains Mono"', 'monospace'],
-            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-          },
-          boxShadow: {
-            neon: '0 0 0 1px rgba(0,255,195,0.25), 0 0 24px rgba(0,255,195,0.20)',
-            neonStrong: '0 0 0 1px rgba(0,255,195,0.45), 0 0 40px rgba(0,255,195,0.35)',
-          },
-          animation: {
-            blink: 'blink 1s steps(2, start) infinite',
-            float: 'float 6s ease-in-out infinite',
-            scan: 'scan 6s linear infinite',
-            glitch: 'glitch 2.5s infinite',
-          },
-          keyframes: {
-            blink: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0 } },
-            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
-            scan: { '0%': { transform: 'translateY(-100%)' }, '100%': { transform: 'translateY(100%)' } },
-            glitch: {
-              '0%,100%': { textShadow: '0 0 0 transparent' },
-              '20%': { textShadow: '2px 0 #ff3dac, -2px 0 #22d3ee' },
-              '40%': { textShadow: '-2px 0 #ff3dac, 2px 0 #22d3ee' },
-              '60%': { textShadow: '1px 0 #00ffc3, -1px 0 #22d3ee' },
-            },
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'Cambria', 'serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
           },
         },
       },
     };
   </script>
 
-  <style>
-    :root {
-      --grid: rgba(0, 255, 195, 0.06);
-      --grid-strong: rgba(0, 255, 195, 0.12);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background-color: #05070d;
-      background-image:
-        radial-gradient(1000px 600px at 80% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
-        radial-gradient(800px 500px at -10% 20%, rgba(0, 255, 195, 0.08), transparent 60%),
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-      background-size: auto, auto, 40px 40px, 40px 40px;
-      color: #d7e3ef;
-      font-family: 'Inter', ui-sans-serif, system-ui;
-    }
-
-    /* Matrix canvas sits behind everything */
-    #matrix {
-      position: fixed; inset: 0; z-index: 0;
-      opacity: 0.28; pointer-events: none;
-    }
-
-    .content { position: relative; z-index: 1; }
-
-    ::selection { background: rgba(0, 255, 195, 0.35); color: #05070d; }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 10px; height: 10px; }
-    ::-webkit-scrollbar-track { background: #05070d; }
-    ::-webkit-scrollbar-thumb { background: #132133; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: #1c3350; }
-
-    /* Neon text */
-    .neon {
-      color: #00ffc3;
-      text-shadow: 0 0 6px rgba(0,255,195,0.6), 0 0 18px rgba(0,255,195,0.35);
-    }
-    .neon-soft { color: #00ffc3; text-shadow: 0 0 8px rgba(0,255,195,0.25); }
-
-    /* Panels */
-    .panel {
-      background: linear-gradient(180deg, rgba(11,15,24,0.85) 0%, rgba(8,12,20,0.85) 100%);
-      border: 1px solid rgba(34, 211, 238, 0.14);
-      border-radius: 14px;
-      backdrop-filter: blur(6px);
-      position: relative;
-      overflow: hidden;
-    }
-    .panel::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(0,255,195,0.06) 50%, transparent 100%);
-      animation: scan 8s linear infinite;
-      pointer-events: none;
-    }
-
-    .panel-header {
-      display: flex; align-items: center; gap: 8px;
-      padding: 10px 14px;
-      border-bottom: 1px solid rgba(34, 211, 238, 0.14);
-      background: rgba(5, 10, 16, 0.8);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: #8aa0b4;
-      letter-spacing: 0.04em;
-    }
-    .dot { width: 10px; height: 10px; border-radius: 999px; display: inline-block; }
-    .dot.red { background: #ff5370; box-shadow: 0 0 8px #ff5370aa; }
-    .dot.yellow { background: #ffb020; box-shadow: 0 0 8px #ffb020aa; }
-    .dot.green { background: #00ffc3; box-shadow: 0 0 8px #00ffc3aa; }
-
-    /* Tag / chip */
-    .chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 10px; border-radius: 999px;
-      font-family: 'JetBrains Mono', monospace; font-size: 11px;
-      color: #a7f3e6;
-      background: rgba(0, 255, 195, 0.07);
-      border: 1px solid rgba(0, 255, 195, 0.25);
-      white-space: nowrap;
-    }
-    .chip.accent { color: #a5f3fc; background: rgba(34,211,238,0.07); border-color: rgba(34,211,238,0.3); }
-    .chip.magenta { color: #fecdd3; background: rgba(255,61,172,0.07); border-color: rgba(255,61,172,0.3); }
-    .chip.amber { color: #fde68a; background: rgba(255,176,32,0.07); border-color: rgba(255,176,32,0.3); }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 16px; border-radius: 10px;
-      font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 13px;
-      border: 1px solid rgba(0, 255, 195, 0.35);
-      color: #00ffc3;
-      background: rgba(0, 255, 195, 0.06);
-      transition: all .2s ease;
-    }
-    .btn:hover { background: rgba(0, 255, 195, 0.15); box-shadow: 0 0 0 1px rgba(0,255,195,0.45), 0 0 28px rgba(0,255,195,0.35); transform: translateY(-1px); }
-    .btn.primary { background: #00ffc3; color: #05070d; border-color: #00ffc3; box-shadow: 0 0 24px rgba(0,255,195,0.45); }
-    .btn.primary:hover { background: #5affd7; }
-    .btn.ghost { color: #a7f3e6; border-color: rgba(167,243,230,0.25); background: transparent; }
-    .btn.ghost:hover { background: rgba(0, 255, 195, 0.06); }
-
-    /* Section heading */
-    .sec-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; letter-spacing: 0.2em;
-      color: #22d3ee;
-    }
-    .sec-title {
-      font-family: 'Share Tech Mono', 'JetBrains Mono', monospace;
-      font-size: clamp(24px, 3vw, 34px);
-      color: #e9fffa;
-      letter-spacing: 0.04em;
-    }
-    .sec-title .mk { color: #00ffc3; }
-
-    /* Typed cursor */
-    .caret::after {
-      content: '_'; color: #00ffc3; margin-left: 2px; animation: blink 1s steps(2,start) infinite;
-    }
-
-    /* Timeline */
-    .timeline { position: relative; padding-left: 28px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 1px;
-      background: linear-gradient(180deg, rgba(0,255,195,0.5), rgba(34,211,238,0.15) 50%, transparent);
-    }
-    .tl-item { position: relative; padding-bottom: 28px; }
-    .tl-item::before {
-      content: ''; position: absolute; left: -22px; top: 6px;
-      width: 12px; height: 12px; border-radius: 999px;
-      background: #00ffc3; box-shadow: 0 0 0 3px rgba(0,255,195,0.15), 0 0 14px rgba(0,255,195,0.6);
-    }
-
-    /* Progress bar */
-    .bar { height: 6px; width: 100%; background: rgba(34,211,238,0.12); border-radius: 999px; overflow: hidden; }
-    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, #00ffc3, #22d3ee); box-shadow: 0 0 12px rgba(0,255,195,0.6); }
-
-    /* Nav active */
-    .nav-link { color: #a7f3e6; opacity: 0.8; }
-    .nav-link:hover { color: #00ffc3; opacity: 1; }
-    .nav-link.active { color: #00ffc3; opacity: 1; }
-    .nav-link.active::after {
-      content: ''; display: block; height: 2px; margin-top: 4px;
-      background: linear-gradient(90deg, #00ffc3, transparent);
-      box-shadow: 0 0 10px rgba(0,255,195,0.6);
-    }
-
-    /* Terminal body */
-    .term {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13.5px; line-height: 1.7;
-      color: #d7e3ef;
-      padding: 18px 20px;
-    }
-    .term .prompt { color: #00ffc3; }
-    .term .path { color: #22d3ee; }
-    .term .cmd { color: #e9fffa; }
-    .term .out { color: #a7c0d4; }
-    .term .ok { color: #00ffc3; }
-    .term .warn { color: #ffb020; }
-    .term .err { color: #ff5370; }
-
-    /* Project card */
-    .project {
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-    }
-    .project:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0,255,195,0.45);
-      box-shadow: 0 0 0 1px rgba(0,255,195,0.45), 0 10px 40px rgba(0,255,195,0.15);
-    }
-
-    /* Badge (cert) */
-    .badge {
-      display: flex; align-items: center; gap: 10px;
-      padding: 10px 12px; border-radius: 10px;
-      border: 1px solid rgba(34,211,238,0.18);
-      background: rgba(11,15,24,0.7);
-      font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
-      color: #cfeee4;
-    }
-    .badge .ico {
-      width: 28px; height: 28px; flex-shrink: 0;
-      display: grid; place-items: center;
-      background: rgba(0,255,195,0.08);
-      border: 1px solid rgba(0,255,195,0.3);
-      border-radius: 8px; color: #00ffc3;
-    }
-
-    /* Reveal on scroll */
-    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    @media (prefers-reduced-motion: reduce) {
-      .panel::before, .animate-blink, .caret::after { animation: none !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="font-sans">
-  <canvas id="matrix" aria-hidden="true"></canvas>
+<body>
+  <div class="min-h-screen">
 
-  <div class="content">
-    <!-- NAV -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-cyber-bg/70 border-b border-cyan-400/10">
-      <nav class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
-        <a href="#home" class="flex items-center gap-2 font-mono text-sm text-cyber-primary">
-          <svg width="20" height="20" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path d="M32 6 L56 16 V34 C56 47 45 56 32 60 C19 56 8 47 8 34 V16 Z" stroke="#00ffc3" stroke-width="3"/>
-            <path d="M22 32 L30 40 L44 24" stroke="#00ffc3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- ═══════ NAV ═══════ -->
+    <header class="sticky top-0 z-50 bg-neutral-50/90 backdrop-blur-md border-b border-neutral-200">
+      <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-2">
+          <svg width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 6 L56 16 V34 C56 47 45 56 32 60 C19 56 8 47 8 34 V16 Z" stroke="#B8A38A" stroke-width="3"/>
+            <path d="M22 32 L30 40 L44 24" stroke="#B8A38A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span class="tracking-widest">rifqi@soc</span><span class="text-cyber-muted">:</span><span class="text-cyber-accent">~</span><span class="neon-soft">$</span>
+          <span class="font-serif font-semibold text-base tracking-tight text-neutral-900">Rifqi Rofian Tanamas</span>
         </a>
-        <ul class="hidden md:flex items-center gap-7 text-sm font-mono">
-          <li><a class="nav-link" href="#about">./about</a></li>
-          <li><a class="nav-link" href="#experience">./experience</a></li>
-          <li><a class="nav-link" href="#projects">./projects</a></li>
-          <li><a class="nav-link" href="#skills">./skills</a></li>
-          <li><a class="nav-link" href="#certs">./certs</a></li>
-          <li><a class="nav-link" href="#contact">./contact</a></li>
+
+        <ul class="hidden md:flex items-center gap-8 text-sm">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#certs">Education</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn primary hidden sm:inline-flex">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
-          contact
+
+        <a href="#contact" class="btn primary hidden sm:inline-flex text-sm">
+          Get in touch
         </a>
-        <button id="navToggle" class="md:hidden btn ghost" aria-label="Toggle navigation">menu</button>
+
+        <button id="navToggle" class="md:hidden p-2 -mr-2 rounded-lg hover:bg-neutral-100 transition-colors" aria-label="Toggle navigation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
       </nav>
-      <div id="mobileNav" class="md:hidden hidden border-t border-cyan-400/10 bg-cyber-bg/95">
-        <ul class="px-5 py-3 space-y-2 font-mono text-sm">
-          <li><a class="nav-link block py-1" href="#about">./about</a></li>
-          <li><a class="nav-link block py-1" href="#experience">./experience</a></li>
-          <li><a class="nav-link block py-1" href="#projects">./projects</a></li>
-          <li><a class="nav-link block py-1" href="#skills">./skills</a></li>
-          <li><a class="nav-link block py-1" href="#certs">./certs</a></li>
-          <li><a class="nav-link block py-1" href="#contact">./contact</a></li>
+
+      <div id="mobileNav" class="md:hidden hidden border-t border-neutral-200 bg-neutral-50/95 backdrop-blur-md">
+        <ul class="px-6 py-4 space-y-1 font-medium text-sm">
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#about">About</a></li>
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#experience">Experience</a></li>
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#projects">Projects</a></li>
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#skills">Skills</a></li>
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#certs">Education</a></li>
+          <li><a class="block py-2 text-neutral-600 hover:text-neutral-900 transition-colors" href="#contact">Contact</a></li>
         </ul>
       </div>
     </header>
 
-    <!-- HERO -->
-    <section id="home" class="max-w-6xl mx-auto px-5 pt-14 pb-20 md:pt-20 md:pb-28 grid md:grid-cols-5 gap-8 items-center">
-      <div class="md:col-span-3 reveal">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="h-2 w-2 rounded-full bg-cyber-primary animate-pulse" aria-hidden="true"></span>
-          <span class="font-mono text-xs text-cyber-muted">STATUS:</span>
-          <span class="font-mono text-xs text-cyber-primary">ONLINE · AVAILABLE FOR PROJECTS</span>
-        </div>
-        <h1 class="font-display tracking-widest text-4xl sm:text-5xl md:text-6xl leading-tight">
-          <span class="block text-cyber-muted text-xl md:text-2xl mb-2 font-mono">&gt; whoami</span>
-          <span class="neon animate-glitch">Rifqi Rofian</span><br>
-          <span class="neon">Tanamas</span>
-        </h1>
-        <p class="mt-5 text-cyber-muted max-w-xl font-mono text-sm leading-relaxed">
-          <span class="text-cyber-accent">role:</span> Lead Technical — SOC &amp; Cybersecurity<br>
-          <span class="text-cyber-accent">focus:</span> Incident Response · SIEM Engineering · Security Automation<br>
-          <span class="text-cyber-accent">loc:</span> Tangerang, Indonesia
-        </p>
-        <p class="mt-5 text-[15px] text-slate-300/90 max-w-2xl leading-relaxed">
-          I build and lead Security Operations programs that actually reduce risk — tuning detections,
-          automating analyst toil, and coordinating response across government and financial sectors.
-          3+ years blue-team experience across SOC L1/L2, SIEM (Splunk, QRadar, Wazuh), and endpoint
-          security at enterprise scale.
-        </p>
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a class="btn primary" href="#projects">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-            view projects
-          </a>
-          <a class="btn" href="#contact">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
-            get in touch
-          </a>
-          <a class="btn ghost" href="https://linkedin.com/in/rifqirofian" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.26 2.37 4.26 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56z"/></svg>
-            linkedin
-          </a>
-        </div>
-        <div class="mt-8 flex flex-wrap gap-2">
-          <span class="chip">SOC Lead</span>
-          <span class="chip accent">Splunk</span>
-          <span class="chip accent">QRadar</span>
-          <span class="chip accent">Wazuh</span>
-          <span class="chip magenta">CrowdStrike</span>
-          <span class="chip magenta">SentinelOne</span>
-          <span class="chip amber">Python</span>
-          <span class="chip">CyberArk</span>
-        </div>
-      </div>
+    <!-- ═══════ HERO ═══════ -->
+    <section id="home" class="max-w-5xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+      <div class="grid md:grid-cols-5 gap-12 items-center">
+        <!-- Left: Content -->
+        <div class="md:col-span-3">
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-6">
+              <span class="h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
+              <span class="font-mono text-xs text-neutral-500 tracking-wide">Available for projects</span>
+            </div>
 
-      <div class="md:col-span-2 reveal">
-        <div class="panel shadow-neon">
-          <div class="panel-header">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="ml-2">rifqi@soc</span>
-            <span class="text-cyber-muted">—</span>
-            <span>bash</span>
-            <span class="ml-auto">~/portfolio</span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight">
+              Rifqi Rofian<br>Tanamas
+            </h1>
+
+            <div class="mt-5 space-y-1.5">
+              <p class="text-base text-neutral-600">
+                <span class="font-mono text-xs text-accent uppercase tracking-wider">Role</span> &mdash; Lead Technical, SOC &amp; Cybersecurity
+              </p>
+              <p class="text-base text-neutral-600">
+                <span class="font-mono text-xs text-accent uppercase tracking-wider">Focus</span> &mdash; Incident Response · SIEM Engineering · Security Automation
+              </p>
+              <p class="text-base text-neutral-600">
+                <span class="font-mono text-xs text-accent uppercase tracking-wider">Location</span> &mdash; Tangerang, Indonesia
+              </p>
+            </div>
+
+            <p class="mt-6 text-neutral-500 max-w-xl text-[15px] leading-relaxed">
+              I build and lead Security Operations programs that actually reduce risk — tuning detections,
+              automating analyst toil, and coordinating response across government and financial sectors.
+              3+ years blue-team experience across SOC L1/L2, SIEM (Splunk, QRadar, Wazuh), and endpoint
+              security at enterprise scale.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn primary" href="#projects">
+                View projects
+              </a>
+              <a class="btn" href="#contact">
+                Get in touch
+              </a>
+              <a class="btn" href="https://linkedin.com/in/rifqirofian" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.26 2.37 4.26 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="chip accent">SOC Lead</span>
+              <span class="chip">Splunk</span>
+              <span class="chip">QRadar</span>
+              <span class="chip">Wazuh</span>
+              <span class="chip">CrowdStrike</span>
+              <span class="chip">SentinelOne</span>
+              <span class="chip">Python</span>
+              <span class="chip">CyberArk</span>
+            </div>
           </div>
-          <div class="term">
-            <div><span class="prompt">rifqi@soc</span>:<span class="path">~</span><span class="ok">$</span> <span class="cmd">cat identity.yaml</span></div>
-            <div class="out">name: Rifqi Rofian Tanamas</div>
-            <div class="out">title: <span class="ok">Lead Technical — Cybersecurity</span></div>
-            <div class="out">years_exp: 3+</div>
-            <div class="out">sectors: [government, financial]</div>
-            <div class="out">certs: [CySA+, ISO/IEC 27001, CyberArk L1, IBM CyberSec]</div>
-            <div class="mt-2"><span class="prompt">rifqi@soc</span>:<span class="path">~</span><span class="ok">$</span> <span class="cmd">./now.sh</span></div>
-            <div class="out">[<span class="ok">+</span>] Leading 7-person SOC L1 team</div>
-            <div class="out">[<span class="ok">+</span>] Automating triage w/ Python (↓70% false ops)</div>
-            <div class="out">[<span class="ok">+</span>] Tuning Splunk use cases (↓90% false positives)</div>
-            <div class="mt-2"><span class="prompt">rifqi@soc</span>:<span class="path">~</span><span class="ok">$</span> <span id="typed" class="cmd caret"></span></div>
+        </div>
+
+        <!-- Right: Photo + mini terminal -->
+        <div class="md:col-span-2">
+          <div class="reveal">
+            <img src="foto.jpg" alt="Rifqi Rofian Tanamas" class="w-full max-w-[280px] md:max-w-none rounded-xl object-cover border border-neutral-200" loading="lazy" />
+
+            <div class="card mt-5 p-4">
+              <div class="term">
+                <div><span class="prompt">$</span> <span class="cmd">cat identity.yaml</span></div>
+                <div class="out">name: Rifqi Rofian Tanamas</div>
+                <div class="out">title: <span class="ok">Lead Technical — Cybersecurity</span></div>
+                <div class="out">years_exp: 3+</div>
+                <div class="out">sectors: [government, financial]</div>
+                <div class="out">certs: [CySA+, ISO 27001, CyberArk L1, IBM CyberSec]</div>
+                <div class="mt-2"><span class="prompt">$</span> <span class="cmd">./status.sh</span></div>
+                <div class="out">[<span class="ok">+</span>] Leading 7-person SOC L1 team</div>
+                <div class="out">[<span class="ok">+</span>] Automating triage w/ Python (70% fewer false ops)</div>
+                <div class="out">[<span class="ok">+</span>] Tuning Splunk use cases (90% fewer false positives)</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="max-w-6xl mx-auto px-5 pb-20">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 01</div>
-        <h2 class="sec-title"><span class="mk">#</span> about</h2>
+    <!-- ═══════ ABOUT ═══════ -->
+    <section id="about" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">01</div>
+        <h2 class="sec-title">About</h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="panel p-6 md:col-span-2 reveal">
-          <div class="flex items-center gap-5 mb-5">
-            <img src="foto.jpg" alt="Rifqi Rofian Tanamas" class="w-20 h-20 rounded-xl object-cover border border-cyber-primary/40 shadow-neon" loading="lazy" />
-            <div>
-              <div class="font-mono text-xs text-cyber-accent">> cat /etc/profile</div>
-              <h3 class="font-display text-2xl neon-soft tracking-wider">Blue-team engineer &amp; SOC lead</h3>
-              <div class="text-cyber-muted text-xs font-mono">Tangerang · Indonesia · UTC+7</div>
-            </div>
-          </div>
-          <p class="text-slate-300/90 leading-relaxed">
+        <div class="card p-8 md:col-span-2 reveal">
+          <p class="text-neutral-600 leading-relaxed text-[15px]">
             Cybersecurity professional with 3+ years of progressive experience in SOC operations,
             incident response, and security automation. Proven in leading cross-functional teams,
             developing Splunk use cases, optimizing threat detection, and ensuring SLA adherence in
@@ -416,344 +211,330 @@
             outcomes with business requirements.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="chip">CSIRT</span>
-            <span class="chip accent">SIEM Engineering</span>
-            <span class="chip magenta">Incident Response</span>
-            <span class="chip amber">Security Automation</span>
+            <span class="chip accent">CSIRT</span>
+            <span class="chip">SIEM Engineering</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">Security Automation</span>
             <span class="chip">Endpoint Security</span>
-            <span class="chip accent">Identity &amp; Access</span>
+            <span class="chip">Identity &amp; Access</span>
           </div>
         </div>
 
-        <div class="grid gap-4 reveal">
-          <div class="panel p-5">
-            <div class="font-mono text-xs text-cyber-muted">// metric</div>
-            <div class="font-display text-4xl neon mt-1" data-counter="3">0</div>
-            <div class="text-sm text-slate-300">Years in cybersecurity (+IT support background)</div>
+        <div class="grid gap-4 stagger">
+          <div class="card p-5 reveal">
+            <div class="sec-label text-[10px]">Metric</div>
+            <div class="metric-value mt-2" data-counter="3">0</div>
+            <div class="text-sm text-neutral-500 mt-1">Years in cybersecurity</div>
           </div>
-          <div class="panel p-5">
-            <div class="font-mono text-xs text-cyber-muted">// metric</div>
-            <div class="font-display text-4xl neon mt-1"><span data-counter="2850">0</span></div>
-            <div class="text-sm text-slate-300">Endpoints protected in a single AV rollout</div>
+          <div class="card p-5 reveal">
+            <div class="sec-label text-[10px]">Metric</div>
+            <div class="metric-value mt-2"><span data-counter="2850">0</span></div>
+            <div class="text-sm text-neutral-500 mt-1">Endpoints protected in a single AV rollout</div>
           </div>
-          <div class="panel p-5">
-            <div class="font-mono text-xs text-cyber-muted">// metric</div>
-            <div class="font-display text-4xl neon mt-1"><span data-counter="90">0</span>%</div>
-            <div class="text-sm text-slate-300">False-positive reduction via Splunk tuning</div>
+          <div class="card p-5 reveal">
+            <div class="sec-label text-[10px]">Metric</div>
+            <div class="metric-value mt-2"><span data-counter="90">0</span><span class="text-2xl text-neutral-400">%</span></div>
+            <div class="text-sm text-neutral-500 mt-1">False-positive reduction via Splunk tuning</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="max-w-6xl mx-auto px-5 pb-20">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 02</div>
-        <h2 class="sec-title"><span class="mk">#</span> experience</h2>
+    <!-- ═══════ EXPERIENCE ═══════ -->
+    <section id="experience" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">02</div>
+        <h2 class="sec-title">Experience</h2>
       </div>
 
-      <div class="timeline reveal">
+      <div class="timeline">
+
         <!-- Role 1 -->
-        <div class="tl-item">
-          <div class="panel p-5 md:p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <div class="tl-item reveal">
+          <div class="card p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
               <div>
-                <div class="font-mono text-xs text-cyber-accent">role#01</div>
-                <h3 class="font-display text-xl md:text-2xl neon-soft tracking-wide">Lead Technical — Cybersecurity</h3>
-                <div class="text-cyber-muted text-sm font-mono">Focus Solusi Infotama · Jakarta, Indonesia</div>
+                <h3 class="font-serif text-xl md:text-2xl font-semibold text-neutral-900">Lead Technical — Cybersecurity</h3>
+                <div class="text-neutral-500 text-sm mt-0.5">Focus Solusi Infotama · Jakarta, Indonesia</div>
               </div>
               <span class="chip self-start">Jul 2024 — Present</span>
             </div>
-            <ul class="mt-4 space-y-2 text-slate-300 text-[15px] leading-relaxed">
-              <li><span class="text-cyber-primary font-mono">›</span> Led a 7-person L1 SOC team — direction, mentoring, and conflict resolution.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Built Python automation that cut analyst error and lifted blocking accuracy by <b class="text-cyber-primary">70%</b>.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Engineered Splunk dashboards &amp; use cases, reducing false positives by <b class="text-cyber-primary">90%</b>.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Handled complex incidents as L2 analyst and provided escalation support.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Led Bitdefender rollout to <b class="text-cyber-primary">2,850 endpoints</b> with a 4-person team.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Bridged client and vendor, aligning technical deliverables with project goals.</li>
+            <ul class="mt-5 space-y-2.5 text-neutral-600 text-[15px] leading-relaxed">
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Led a 7-person L1 SOC team — direction, mentoring, and conflict resolution.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Built Python automation that cut analyst error and lifted blocking accuracy by <strong class="text-neutral-900">70%</strong>.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Engineered Splunk dashboards &amp; use cases, reducing false positives by <strong class="text-neutral-900">90%</strong>.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Handled complex incidents as L2 analyst and provided escalation support.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Led Bitdefender rollout to <strong class="text-neutral-900">2,850 endpoints</strong> with a 4-person team.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Bridged client and vendor, aligning technical deliverables with project goals.</li>
             </ul>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip accent">Splunk</span>
-              <span class="chip magenta">CrowdStrike</span>
-              <span class="chip accent">ExtraHop</span>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip">Splunk</span>
+              <span class="chip">CrowdStrike</span>
+              <span class="chip">ExtraHop</span>
               <span class="chip">Ixia ThreatArmor</span>
-              <span class="chip magenta">Bitdefender</span>
-              <span class="chip amber">Python</span>
+              <span class="chip">Bitdefender</span>
+              <span class="chip accent">Python</span>
               <span class="chip">Jira</span>
             </div>
           </div>
         </div>
 
         <!-- Role 2 -->
-        <div class="tl-item">
-          <div class="panel p-5 md:p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <div class="tl-item reveal">
+          <div class="card p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
               <div>
-                <div class="font-mono text-xs text-cyber-accent">role#02</div>
-                <h3 class="font-display text-xl md:text-2xl neon-soft tracking-wide">IT Security Engineer</h3>
-                <div class="text-cyber-muted text-sm font-mono">PT. CIMB Niaga Finance · Jakarta, Indonesia</div>
+                <h3 class="font-serif text-xl md:text-2xl font-semibold text-neutral-900">IT Security Engineer</h3>
+                <div class="text-neutral-500 text-sm mt-0.5">PT. CIMB Niaga Finance · Jakarta, Indonesia</div>
               </div>
               <span class="chip self-start">Apr 2024 — Present</span>
             </div>
-            <ul class="mt-4 space-y-2 text-slate-300 text-[15px] leading-relaxed">
-              <li><span class="text-cyber-primary font-mono">›</span> Operated AV platforms: PandaSecurity, SentinelOne, Kaspersky.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> VPN support, password resets, and privileged access reviews via CyberArk.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Daily Active Directory operations and GPO validation.</li>
+            <ul class="mt-5 space-y-2.5 text-neutral-600 text-[15px] leading-relaxed">
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Operated AV platforms: PandaSecurity, SentinelOne, Kaspersky.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>VPN support, password resets, and privileged access reviews via CyberArk.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Daily Active Directory operations and GPO validation.</li>
             </ul>
-            <div class="mt-4 flex flex-wrap gap-2">
+            <div class="mt-5 flex flex-wrap gap-2">
               <span class="chip">CyberArk</span>
-              <span class="chip accent">Active Directory</span>
-              <span class="chip magenta">SentinelOne</span>
+              <span class="chip">Active Directory</span>
+              <span class="chip">SentinelOne</span>
               <span class="chip">VPN</span>
             </div>
           </div>
         </div>
 
         <!-- Role 3 -->
-        <div class="tl-item">
-          <div class="panel p-5 md:p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <div class="tl-item reveal">
+          <div class="card p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
               <div>
-                <div class="font-mono text-xs text-cyber-accent">role#03</div>
-                <h3 class="font-display text-xl md:text-2xl neon-soft tracking-wide">Cybersecurity Engineer</h3>
-                <div class="text-cyber-muted text-sm font-mono">PT Alpha Citra Siber Indonesia · Jakarta, Indonesia</div>
+                <h3 class="font-serif text-xl md:text-2xl font-semibold text-neutral-900">Cybersecurity Engineer</h3>
+                <div class="text-neutral-500 text-sm mt-0.5">PT Alpha Citra Siber Indonesia · Jakarta, Indonesia</div>
               </div>
               <span class="chip self-start">Jun 2023 — Apr 2024</span>
             </div>
-            <ul class="mt-4 space-y-2 text-slate-300 text-[15px] leading-relaxed">
-              <li><span class="text-cyber-primary font-mono">›</span> Monitored &amp; triaged ~20 incidents/week across 3 client environments (Splunk, QRadar, Wazuh).</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Enhanced detection logic — lifted alert accuracy, lowered escalations.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Partnered with admins and vendors for threat mitigation.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Contributed to Splunk documentation and SOC knowledge base.</li>
+            <ul class="mt-5 space-y-2.5 text-neutral-600 text-[15px] leading-relaxed">
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Monitored &amp; triaged ~20 incidents/week across 3 client environments (Splunk, QRadar, Wazuh).</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Enhanced detection logic — lifted alert accuracy, lowered escalations.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Partnered with admins and vendors for threat mitigation.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Contributed to Splunk documentation and SOC knowledge base.</li>
             </ul>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip accent">Wazuh</span>
-              <span class="chip accent">Splunk</span>
-              <span class="chip accent">QRadar</span>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip">Wazuh</span>
+              <span class="chip">Splunk</span>
+              <span class="chip">QRadar</span>
               <span class="chip">Jira</span>
-              <span class="chip magenta">SentinelOne</span>
+              <span class="chip">SentinelOne</span>
             </div>
           </div>
         </div>
 
         <!-- Role 4 -->
-        <div class="tl-item">
-          <div class="panel p-5 md:p-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+        <div class="tl-item reveal">
+          <div class="card p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
               <div>
-                <div class="font-mono text-xs text-cyber-accent">role#04</div>
-                <h3 class="font-display text-xl md:text-2xl neon-soft tracking-wide">IT Support Technician</h3>
-                <div class="text-cyber-muted text-sm font-mono">Universitas Multimedia Nusantara · Tangerang, Indonesia</div>
+                <h3 class="font-serif text-xl md:text-2xl font-semibold text-neutral-900">IT Support Technician</h3>
+                <div class="text-neutral-500 text-sm mt-0.5">Universitas Multimedia Nusantara · Tangerang, Indonesia</div>
               </div>
               <span class="chip self-start">Jul 2019 — Jun 2023</span>
             </div>
-            <ul class="mt-4 space-y-2 text-slate-300 text-[15px] leading-relaxed">
-              <li><span class="text-cyber-primary font-mono">›</span> Desktop support, system maintenance, and AV updates.</li>
-              <li><span class="text-cyber-primary font-mono">›</span> Diagnosed hardware/software issues and managed user accounts securely.</li>
+            <ul class="mt-5 space-y-2.5 text-neutral-600 text-[15px] leading-relaxed">
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Desktop support, system maintenance, and AV updates.</li>
+              <li class="flex gap-3"><span class="text-accent mt-1 flex-shrink-0">—</span>Diagnosed hardware/software issues and managed user accounts securely.</li>
             </ul>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="max-w-6xl mx-auto px-5 pb-20">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 03</div>
-        <h2 class="sec-title"><span class="mk">#</span> selected projects</h2>
+    <!-- ═══════ PROJECTS ═══════ -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">03</div>
+        <h2 class="sec-title">Selected Projects</h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 gap-6 stagger">
         <!-- Project 1 -->
-        <article class="panel project p-5 md:p-6 reveal">
+        <article class="card project-card p-6 md:p-8 reveal">
           <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-2 font-mono text-xs text-cyber-accent">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
-              PROJECT_01 · ENDPOINT
-            </div>
-            <span class="chip">2024</span>
+            <span class="sec-label">Endpoint · 2024</span>
           </div>
-          <h3 class="mt-3 font-display text-xl neon-soft tracking-wide">Antivirus Deployment — BPS</h3>
-          <p class="mt-2 text-slate-300 text-[15px] leading-relaxed">
-            Project Lead for a Bitdefender rollout across <b class="text-cyber-primary">2,850 endpoints</b>
+          <h3 class="mt-3 font-serif text-lg font-semibold text-neutral-900">Antivirus Deployment — BPS</h3>
+          <p class="mt-2 text-neutral-500 text-[14px] leading-relaxed">
+            Project Lead for a Bitdefender rollout across <strong class="text-neutral-700">2,850 endpoints</strong>
             at Badan Pusat Statistik. Managed a cross-functional team, ensured SLA compliance,
             minimized disruption, and delivered hands-on operator training.
           </p>
-          <ul class="mt-3 text-sm text-slate-300/90 space-y-1">
-            <li><span class="text-cyber-primary">↳</span> 2,850 endpoints onboarded with zero critical downtime</li>
-            <li><span class="text-cyber-primary">↳</span> 4-person delivery team, vendor-client alignment</li>
-            <li><span class="text-cyber-primary">↳</span> Playbooks + training for long-term operability</li>
+          <ul class="mt-3 text-sm text-neutral-500 space-y-1.5">
+            <li class="flex gap-2"><span class="text-accent">—</span>2,850 endpoints onboarded with zero critical downtime</li>
+            <li class="flex gap-2"><span class="text-accent">—</span>4-person delivery team, vendor-client alignment</li>
+            <li class="flex gap-2"><span class="text-accent">—</span>Playbooks + training for long-term operability</li>
           </ul>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip magenta">Bitdefender</span>
+            <span class="chip accent">Bitdefender</span>
             <span class="chip">Project Mgmt</span>
-            <span class="chip accent">AV Ops</span>
+            <span class="chip">AV Ops</span>
           </div>
         </article>
 
         <!-- Project 2 -->
-        <article class="panel project p-5 md:p-6 reveal">
+        <article class="card project-card p-6 md:p-8 reveal">
           <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-2 font-mono text-xs text-cyber-accent">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 17l6-6 4 4 6-6"/><path d="M14 5h6v6"/></svg>
-              PROJECT_02 · DETECTION ENG
-            </div>
-            <span class="chip">2024</span>
+            <span class="sec-label">Detection Eng · 2024</span>
           </div>
-          <h3 class="mt-3 font-display text-xl neon-soft tracking-wide">SOC Automation &amp; Dashboarding — DJBC</h3>
-          <p class="mt-2 text-slate-300 text-[15px] leading-relaxed">
+          <h3 class="mt-3 font-serif text-lg font-semibold text-neutral-900">SOC Automation &amp; Dashboarding — DJBC</h3>
+          <p class="mt-2 text-neutral-500 text-[14px] leading-relaxed">
             Technical advisor and implementer for Python-based SOC automation and Splunk dashboards
             at DJBC. Developed custom use cases and optimized alert logic, cutting false positives by
-            <b class="text-cyber-primary">90%</b>.
+            <strong class="text-neutral-700">90%</strong>.
           </p>
-          <ul class="mt-3 text-sm text-slate-300/90 space-y-1">
-            <li><span class="text-cyber-primary">↳</span> Python automation for triage &amp; enrichment</li>
-            <li><span class="text-cyber-primary">↳</span> Splunk dashboards tailored to analyst workflows</li>
-            <li><span class="text-cyber-primary">↳</span> Custom detection use cases and tuning loops</li>
+          <ul class="mt-3 text-sm text-neutral-500 space-y-1.5">
+            <li class="flex gap-2"><span class="text-accent">—</span>Python automation for triage &amp; enrichment</li>
+            <li class="flex gap-2"><span class="text-accent">—</span>Splunk dashboards tailored to analyst workflows</li>
+            <li class="flex gap-2"><span class="text-accent">—</span>Custom detection use cases and tuning loops</li>
           </ul>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip accent">Splunk</span>
-            <span class="chip amber">Python</span>
+            <span class="chip">Splunk</span>
+            <span class="chip accent">Python</span>
             <span class="chip">Detection Engineering</span>
           </div>
         </article>
 
         <!-- Project 3 -->
-        <article class="panel project p-5 md:p-6 reveal md:col-span-2">
+        <article class="card project-card p-6 md:p-8 reveal md:col-span-2">
           <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-2 font-mono text-xs text-cyber-accent">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 4v6c0 5-3.5 9.5-9 10-5.5-.5-9-5-9-10V6z"/></svg>
-              PROJECT_03 · MULTI-CLIENT SOC
-            </div>
-            <span class="chip">2023 — 2024</span>
+            <span class="sec-label">Multi-Client SOC · 2023 — 2024</span>
           </div>
-          <h3 class="mt-3 font-display text-xl neon-soft tracking-wide">Multi-Client SIEM Operations — ACSI</h3>
-          <p class="mt-2 text-slate-300 text-[15px] leading-relaxed">
-            SOC L1 Analyst for real-time monitoring and triage of <b class="text-cyber-primary">20+ weekly incidents</b>
+          <h3 class="mt-3 font-serif text-lg font-semibold text-neutral-900">Multi-Client SIEM Operations — ACSI</h3>
+          <p class="mt-2 text-neutral-500 text-[14px] leading-relaxed max-w-3xl">
+            SOC L1 Analyst for real-time monitoring and triage of <strong class="text-neutral-700">20+ weekly incidents</strong>
             across 3 managed clients. Documented alert standards to support CSIRT operations and onboarding.
           </p>
-          <div class="mt-4 grid md:grid-cols-3 gap-3">
-            <div class="panel p-4"><div class="font-mono text-xs text-cyber-muted">clients</div><div class="font-display text-2xl neon-soft">3</div></div>
-            <div class="panel p-4"><div class="font-mono text-xs text-cyber-muted">weekly incidents</div><div class="font-display text-2xl neon-soft">20+</div></div>
-            <div class="panel p-4"><div class="font-mono text-xs text-cyber-muted">siems</div><div class="font-display text-2xl neon-soft">3</div></div>
+          <div class="mt-5 grid grid-cols-3 gap-3 max-w-md">
+            <div class="card p-4 text-center"><div class="sec-label text-[10px]">Clients</div><div class="font-serif text-2xl font-semibold text-neutral-900 mt-1">3</div></div>
+            <div class="card p-4 text-center"><div class="sec-label text-[10px]">Weekly Incidents</div><div class="font-serif text-2xl font-semibold text-neutral-900 mt-1">20+</div></div>
+            <div class="card p-4 text-center"><div class="sec-label text-[10px]">SIEMs</div><div class="font-serif text-2xl font-semibold text-neutral-900 mt-1">3</div></div>
           </div>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip accent">Splunk</span>
-            <span class="chip accent">QRadar</span>
-            <span class="chip accent">Wazuh</span>
-            <span class="chip">CSIRT</span>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="chip">Splunk</span>
+            <span class="chip">QRadar</span>
+            <span class="chip">Wazuh</span>
+            <span class="chip accent">CSIRT</span>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="max-w-6xl mx-auto px-5 pb-20">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 04</div>
-        <h2 class="sec-title"><span class="mk">#</span> skills &amp; tooling</h2>
+    <!-- ═══════ SKILLS ═══════ -->
+    <section id="skills" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">04</div>
+        <h2 class="sec-title">Skills &amp; Tooling</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="panel p-5 md:p-6 reveal">
-          <div class="panel-header -m-5 md:-m-6 mb-4 md:mb-5">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="ml-2">./skills --category=core</span>
-          </div>
-          <div class="space-y-4">
+        <div class="card p-6 md:p-8 reveal">
+          <div class="font-mono text-xs text-accent tracking-wide mb-6">Core</div>
+          <div class="space-y-5">
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">SIEM &amp; Detection</span><span class="text-cyber-muted">90%</span></div>
-              <div class="bar mt-1"><span style="width:90%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip accent">Splunk</span><span class="chip accent">QRadar</span><span class="chip accent">Wazuh</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>SIEM &amp; Detection</span><span>90%</span></div>
+              <div class="bar"><span style="width:90%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">Splunk</span><span class="chip text-[10px]">QRadar</span><span class="chip text-[10px]">Wazuh</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Endpoint Security</span><span class="text-cyber-muted">85%</span></div>
-              <div class="bar mt-1"><span style="width:85%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip magenta">SentinelOne</span><span class="chip magenta">CrowdStrike</span><span class="chip magenta">Bitdefender</span><span class="chip magenta">Kaspersky</span><span class="chip magenta">TrendMicro</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Endpoint Security</span><span>85%</span></div>
+              <div class="bar"><span style="width:85%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">SentinelOne</span><span class="chip text-[10px]">CrowdStrike</span><span class="chip text-[10px]">Bitdefender</span><span class="chip text-[10px]">Kaspersky</span><span class="chip text-[10px]">TrendMicro</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Identity &amp; Access</span><span class="text-cyber-muted">80%</span></div>
-              <div class="bar mt-1"><span style="width:80%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip">CyberArk</span><span class="chip">Active Directory</span><span class="chip">GPO</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Identity &amp; Access</span><span>80%</span></div>
+              <div class="bar"><span style="width:80%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">CyberArk</span><span class="chip text-[10px]">Active Directory</span><span class="chip text-[10px]">GPO</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Incident Response</span><span class="text-cyber-muted">85%</span></div>
-              <div class="bar mt-1"><span style="width:85%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip">CSIRT</span><span class="chip">Threat Intel</span><span class="chip">IDS/IPS</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Incident Response</span><span>85%</span></div>
+              <div class="bar"><span style="width:85%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">CSIRT</span><span class="chip text-[10px]">Threat Intel</span><span class="chip text-[10px]">IDS/IPS</span></div>
             </div>
           </div>
         </div>
 
-        <div class="panel p-5 md:p-6 reveal">
-          <div class="panel-header -m-5 md:-m-6 mb-4 md:mb-5">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="ml-2">./skills --category=automation-and-soft</span>
-          </div>
-          <div class="space-y-4">
+        <div class="card p-6 md:p-8 reveal">
+          <div class="font-mono text-xs text-accent tracking-wide mb-6">Automation &amp; Leadership</div>
+          <div class="space-y-5">
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Automation &amp; Scripting</span><span class="text-cyber-muted">75%</span></div>
-              <div class="bar mt-1"><span style="width:75%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip amber">Python</span><span class="chip amber">Bash</span><span class="chip amber">Git</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Automation &amp; Scripting</span><span>75%</span></div>
+              <div class="bar"><span style="width:75%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px] accent">Python</span><span class="chip text-[10px]">Bash</span><span class="chip text-[10px]">Git</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Platforms</span><span class="text-cyber-muted">85%</span></div>
-              <div class="bar mt-1"><span style="width:85%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip">Windows Server</span><span class="chip">Linux</span><span class="chip">iOS</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Platforms</span><span>85%</span></div>
+              <div class="bar"><span style="width:85%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">Windows Server</span><span class="chip text-[10px]">Linux</span><span class="chip text-[10px]">iOS</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Leadership &amp; Project</span><span class="text-cyber-muted">90%</span></div>
-              <div class="bar mt-1"><span style="width:90%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip">Team Lead</span><span class="chip">Mentoring</span><span class="chip">Stakeholder Mgmt</span><span class="chip">Training</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Leadership &amp; Project</span><span>90%</span></div>
+              <div class="bar"><span style="width:90%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">Team Lead</span><span class="chip text-[10px]">Mentoring</span><span class="chip text-[10px]">Stakeholder Mgmt</span><span class="chip text-[10px]">Training</span></div>
             </div>
             <div>
-              <div class="flex justify-between font-mono text-xs"><span class="text-cyber-accent">Comms &amp; Reporting</span><span class="text-cyber-muted">90%</span></div>
-              <div class="bar mt-1"><span style="width:90%"></span></div>
-              <div class="mt-2 flex flex-wrap gap-2"><span class="chip">Technical Writing</span><span class="chip">Audit Response</span><span class="chip">Jira</span></div>
+              <div class="flex justify-between font-mono text-xs text-neutral-500 mb-1.5"><span>Comms &amp; Reporting</span><span>90%</span></div>
+              <div class="bar"><span style="width:90%"></span></div>
+              <div class="mt-2 flex flex-wrap gap-1.5"><span class="chip text-[10px]">Technical Writing</span><span class="chip text-[10px]">Audit Response</span><span class="chip text-[10px]">Jira</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CERTS & EDUCATION -->
-    <section id="certs" class="max-w-6xl mx-auto px-5 pb-20">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 05</div>
-        <h2 class="sec-title"><span class="mk">#</span> certifications &amp; education</h2>
+    <!-- ═══════ CERTS & EDUCATION ═══════ -->
+    <section id="certs" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">05</div>
+        <h2 class="sec-title">Certifications &amp; Education</h2>
       </div>
 
       <div class="grid md:grid-cols-5 gap-6">
-        <div class="panel p-5 md:p-6 md:col-span-3 reveal">
-          <div class="font-mono text-xs text-cyber-accent mb-3">&gt; ls certifications/</div>
+        <!-- Certs -->
+        <div class="card p-6 md:p-8 md:col-span-3 reveal">
+          <div class="font-mono text-xs text-accent tracking-wide mb-4">Certifications</div>
           <div class="grid sm:grid-cols-2 gap-3">
-            <div class="badge"><span class="ico">✓</span><span>CompTIA CySA+ · Cybersecurity Analyst</span></div>
-            <div class="badge"><span class="ico">✓</span><span>ISO/IEC 27001 Associate · SkillFront</span></div>
-            <div class="badge"><span class="ico">✓</span><span>Cybersecurity Engineer · Digitalent</span></div>
-            <div class="badge"><span class="ico">✓</span><span>Fundamental Web Security · BelajarSiber</span></div>
-            <div class="badge"><span class="ico">✓</span><span>CyberArk Level 1 Trustee</span></div>
-            <div class="badge"><span class="ico">✓</span><span>IBM Cybersecurity Fundamentals</span></div>
-            <div class="badge"><span class="ico">✓</span><span>Google IT Support Fundamentals</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>CompTIA CySA+ · Cybersecurity Analyst</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>ISO/IEC 27001 Associate · SkillFront</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>Cybersecurity Engineer · Digitalent</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>Fundamental Web Security · BelajarSiber</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>CyberArk Level 1 Trustee</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>IBM Cybersecurity Fundamentals</span></div>
+            <div class="badge"><span class="ico">&#10003;</span><span>Google IT Support Fundamentals</span></div>
           </div>
         </div>
 
-        <div class="panel p-5 md:p-6 md:col-span-2 reveal">
-          <div class="font-mono text-xs text-cyber-accent mb-3">&gt; ls education/</div>
-          <div class="space-y-4">
+        <!-- Education -->
+        <div class="card p-6 md:p-8 md:col-span-2 reveal">
+          <div class="font-mono text-xs text-accent tracking-wide mb-4">Education</div>
+          <div class="space-y-5">
             <div>
-              <div class="font-display text-lg neon-soft">Nusa Mandiri University</div>
-              <div class="text-slate-300 text-sm">Bachelor's — Information Systems</div>
-              <div class="text-cyber-muted text-xs font-mono">2021 — 2023 · GPA 3.67</div>
+              <div class="font-serif text-base font-semibold text-neutral-900">Nusa Mandiri University</div>
+              <div class="text-sm text-neutral-500">Bachelor's — Information Systems</div>
+              <div class="font-mono text-xs text-neutral-400 mt-0.5">2021 — 2023 · GPA 3.67</div>
             </div>
             <div>
-              <div class="font-display text-lg neon-soft">Bina Sarana Informatika University</div>
-              <div class="text-slate-300 text-sm">Associate — Information Systems</div>
-              <div class="text-cyber-muted text-xs font-mono">2018 — 2021 · GPA 3.72</div>
+              <div class="font-serif text-base font-semibold text-neutral-900">Bina Sarana Informatika University</div>
+              <div class="text-sm text-neutral-500">Associate — Information Systems</div>
+              <div class="font-mono text-xs text-neutral-400 mt-0.5">2018 — 2021 · GPA 3.72</div>
             </div>
-            <div class="pt-2 border-t border-cyan-400/10">
-              <div class="font-mono text-xs text-cyber-accent mb-1">&gt; ls education/informal/</div>
-              <ul class="text-slate-300 text-sm space-y-1">
-                <li><span class="text-cyber-primary font-mono">›</span> Digitalent — Cybersecurity Technician (2022)</li>
-                <li><span class="text-cyber-primary font-mono">›</span> BelajarSiber — Fundamental Web Security (2022)</li>
+            <div class="pt-4 border-t border-neutral-200">
+              <div class="font-mono text-xs text-accent tracking-wide mb-2">Informal</div>
+              <ul class="text-sm text-neutral-500 space-y-1.5">
+                <li class="flex gap-2"><span class="text-accent">—</span>Digitalent — Cybersecurity Technician (2022)</li>
+                <li class="flex gap-2"><span class="text-accent">—</span>BelajarSiber — Fundamental Web Security (2022)</li>
               </ul>
             </div>
           </div>
@@ -761,191 +542,74 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="max-w-6xl mx-auto px-5 pb-24">
-      <div class="mb-8 reveal">
-        <div class="sec-label">// 06</div>
-        <h2 class="sec-title"><span class="mk">#</span> contact</h2>
+    <!-- ═══════ CONTACT ═══════ -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+      <div class="mb-10 reveal">
+        <div class="section-divider"></div>
+        <div class="sec-label mt-4">06</div>
+        <h2 class="sec-title">Contact</h2>
       </div>
 
-      <div class="panel p-6 md:p-10 reveal">
-        <div class="grid md:grid-cols-5 gap-8 items-center">
+      <div class="card p-8 md:p-12 reveal">
+        <div class="grid md:grid-cols-5 gap-10 items-center">
           <div class="md:col-span-3">
-            <div class="font-mono text-xs text-cyber-accent">&gt; establishing secure channel…</div>
-            <h3 class="mt-2 font-display text-3xl md:text-4xl neon tracking-wider">Let's build a safer stack.</h3>
-            <p class="mt-3 text-slate-300 max-w-xl">
-              Open to SOC leadership, detection engineering, incident response, and cybersecurity
-              consulting engagements. I respond within 24 hours.
+            <div class="font-mono text-xs text-accent tracking-wide mb-2">Let's connect</div>
+            <h3 class="font-serif text-2xl md:text-3xl font-semibold text-neutral-900 leading-snug">
+              Open to SOC leadership, detection engineering, incident response, and cybersecurity consulting engagements.
+            </h3>
+            <p class="mt-4 text-neutral-500 text-[15px]">
+              I typically respond within 24 hours.
             </p>
             <div class="mt-6 flex flex-wrap gap-3">
               <a class="btn primary" href="mailto:rifqirofian@gmail.com">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
                 rifqirofian@gmail.com
               </a>
               <a class="btn" href="https://linkedin.com/in/rifqirofian" target="_blank" rel="noopener">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.26 2.37 4.26 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56z"/></svg>
-                linkedin.com/in/rifqirofian
+                LinkedIn
               </a>
-              <a class="btn ghost" href="tel:+6289563575757">
+              <a class="btn" href="tel:+628****7579">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92V21a1 1 0 0 1-1.11 1A19 19 0 0 1 2 4.11 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.27 1L7.21 10.79a16 16 0 0 0 6 6l2-1.62a1 1 0 0 1 1-.27l4 1a1 1 0 0 1 .75 1z"/></svg>
                 +62 895-6357-57579
               </a>
             </div>
           </div>
-          <div class="md:col-span-2 panel p-5">
-            <div class="panel-header -m-5 mb-4">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-              <span class="ml-2">contact.log</span>
-            </div>
-            <div class="term text-[13px]">
-              <div><span class="prompt">rifqi@soc</span>:<span class="path">~</span><span class="ok">$</span> <span class="cmd">whois rifqi</span></div>
-              <div class="out">name: Rifqi Rofian Tanamas</div>
-              <div class="out">loc:  Tangerang, Indonesia (UTC+7)</div>
-              <div class="out">avail: <span class="ok">open to opportunities</span></div>
-              <div class="mt-2"><span class="prompt">rifqi@soc</span>:<span class="path">~</span><span class="ok">$</span> <span class="cmd">connect --secure</span></div>
-              <div class="out ok">[+] TLS handshake complete</div>
-              <div class="out ok">[+] channel established</div>
+
+          <div class="md:col-span-2">
+            <div class="bg-neutral-100 rounded-xl p-6 border border-neutral-200">
+              <div class="term text-[12px]">
+                <div><span class="prompt">$</span> <span class="cmd">whois rifqi</span></div>
+                <div class="out">name: Rifqi Rofian Tanamas</div>
+                <div class="out">loc:  Tangerang, Indonesia (UTC+7)</div>
+                <div class="out">avail: <span class="ok">open to opportunities</span></div>
+                <div class="mt-2"><span class="prompt">$</span> <span class="cmd">connect --secure</span></div>
+                <div class="out ok">[+] TLS handshake complete</div>
+                <div class="out ok">[+] channel established</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="border-t border-cyan-400/10">
-      <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col md:flex-row items-center justify-between gap-3 font-mono text-xs">
-        <div class="text-cyber-muted">© <span id="year">2024</span> Rifqi Rofian Tanamas · crafted with <span class="text-cyber-primary">&lt;3</span> and caffeine</div>
-        <div class="flex items-center gap-4 text-cyber-muted">
-          <a class="hover:text-cyber-primary" href="#home">^ top</a>
-          <span class="text-cyber-accent">·</span>
-          <a class="hover:text-cyber-primary" href="https://linkedin.com/in/rifqirofian" target="_blank" rel="noopener">linkedin</a>
-          <span class="text-cyber-accent">·</span>
-          <a class="hover:text-cyber-primary" href="mailto:rifqirofian@gmail.com">email</a>
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="border-t border-neutral-200">
+      <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-neutral-400">
+        <div>&copy; <span id="year">2024</span> Rifqi Rofian Tanamas</div>
+        <div class="flex items-center gap-5">
+          <a class="hover:text-neutral-900 transition-colors" href="#home">Back to top</a>
+          <span class="text-neutral-300">&middot;</span>
+          <a class="hover:text-neutral-900 transition-colors" href="https://linkedin.com/in/rifqirofian" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="text-neutral-300">&middot;</span>
+          <a class="hover:text-neutral-900 transition-colors" href="mailto:rifqirofian@gmail.com">Email</a>
         </div>
       </div>
     </footer>
+
   </div>
 
-  <script>
-    // Matrix rain
-    (function () {
-      const canvas = document.getElementById('matrix');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const chars = 'アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]*#$%!?@&01';
-      let columns, drops, fontSize;
-
-      function setup() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        fontSize = Math.max(12, Math.floor(window.innerWidth / 120));
-        columns = Math.floor(canvas.width / fontSize);
-        drops = new Array(columns).fill(1).map(() => Math.random() * -50);
-      }
-
-      function draw() {
-        ctx.fillStyle = 'rgba(5,7,13,0.08)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.font = fontSize + 'px "JetBrains Mono", monospace';
-        for (let i = 0; i < drops.length; i++) {
-          const text = chars.charAt(Math.floor(Math.random() * chars.length));
-          const x = i * fontSize;
-          const y = drops[i] * fontSize;
-          ctx.fillStyle = y < 40 ? '#a5fff0' : 'rgba(0,255,195,0.85)';
-          ctx.fillText(text, x, y);
-          if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
-          drops[i] += 1;
-        }
-      }
-
-      setup();
-      window.addEventListener('resize', setup);
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!reduced) setInterval(draw, 55);
-    })();
-
-    // Typewriter in hero terminal
-    (function () {
-      const el = document.getElementById('typed');
-      if (!el) return;
-      const lines = [
-        'nmap -sV portfolio.rifqi',
-        'sudo tail -f /var/log/soc.log',
-        'python3 triage.py --auto',
-        'splunk search "index=soc severity=high"',
-        'echo "hello, recruiter 👋" | tee /dev/pts/0',
-      ];
-      let li = 0, ci = 0, deleting = false;
-      function tick() {
-        const cur = lines[li];
-        if (!deleting) {
-          el.textContent = cur.slice(0, ++ci);
-          if (ci === cur.length) { deleting = true; setTimeout(tick, 1400); return; }
-        } else {
-          el.textContent = cur.slice(0, --ci);
-          if (ci === 0) { deleting = false; li = (li + 1) % lines.length; }
-        }
-        setTimeout(tick, deleting ? 22 : 55);
-      }
-      tick();
-    })();
-
-    // Reveal on scroll
-    (function () {
-      const items = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) { items.forEach(i => i.classList.add('visible')); return; }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      items.forEach(i => io.observe(i));
-    })();
-
-    // Counters
-    (function () {
-      const els = document.querySelectorAll('[data-counter]');
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (!e.isIntersecting) return;
-          const el = e.target;
-          const target = parseInt(el.dataset.counter, 10) || 0;
-          const dur = 1100; const start = performance.now();
-          function step(t) {
-            const p = Math.min(1, (t - start) / dur);
-            const val = Math.floor(p * target);
-            el.textContent = val.toLocaleString();
-            if (p < 1) requestAnimationFrame(step);
-            else el.textContent = target.toLocaleString();
-          }
-          requestAnimationFrame(step);
-          io.unobserve(el);
-        });
-      }, { threshold: 0.4 });
-      els.forEach(el => io.observe(el));
-    })();
-
-    // Active nav link on scroll
-    (function () {
-      const sections = ['about', 'experience', 'projects', 'skills', 'certs', 'contact']
-        .map(id => document.getElementById(id)).filter(Boolean);
-      const links = document.querySelectorAll('.nav-link');
-      const setActive = (id) => links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
-      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-      sections.forEach(s => io.observe(s));
-    })();
-
-    // Mobile nav toggle
-    (function () {
-      const btn = document.getElementById('navToggle');
-      const menu = document.getElementById('mobileNav');
-      if (!btn || !menu) return;
-      btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
-    })();
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="scripts.js" defer></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKL9R2ZB0K"></script>
