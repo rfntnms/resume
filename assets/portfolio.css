@@ -425,7 +425,16 @@ h3 { font-size: 1.21rem; line-height: 1.25; }
 .stack { margin-top: 12px; }
 
 .projects-section { padding-block: clamp(58px, 7vw, 100px); background: var(--wash); }
-.projects-section h2 { margin-bottom: clamp(25px, 4vw, 53px); }
+.projects-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: clamp(25px, 4vw, 53px);
+}
+.project h3 a { text-decoration-thickness: .035em; text-underline-offset: .11em; }
+.project h3 a:hover, .project h3 a:active { text-decoration-thickness: .06em; }
 .projects { display: grid; grid-template-columns: 1.18fr 1fr; gap: 0 clamp(27px, 6vw, 85px); }
 .project { padding-block: 21px; border-top: 1px solid var(--rule); }
 .project-featured {

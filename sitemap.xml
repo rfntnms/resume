@@ -4,4 +4,20 @@
     <loc>https://buburtech.com/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
+  <url>
+    <loc>https://buburtech.com/projects/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://buburtech.com/projects/bitdefender-endpoint-deployment/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://buburtech.com/projects/splunk-detection-engineering/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://buburtech.com/projects/multi-client-siem-operations/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
 </urlset>
