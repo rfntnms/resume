@@ -1,51 +1,90 @@
-# Rifqi Rofian Tanamas — L2 Security Analyst
+# Rifqi Rofian Tanamas — L2 Security Analyst Portfolio
 
-Single-page portfolio, built for international job hunting. Static HTML, no build
-step, no framework, no backend.
+High-performance, editorial cybersecurity portfolio and case studies site. Built with vanilla HTML, modern modular CSS, and vanilla ES modules — zero build step, zero framework, zero external runtime dependencies.
 
 **Live:** [buburtech.com](https://buburtech.com)
 
-## Tech
+---
 
-- One hand-written `index.html` — HTML + inline CSS + 1.3 KB (gzipped) of JavaScript
-- JetBrains Mono, self-hosted latin subset (no Google Fonts request)
-- SOC footage as the hero background, encoded to MP4 + WebM
-- GitHub Pages from `main`, custom domain via `CNAME`
+## Technical Highlights
 
-Zero third-party requests at runtime — no CDN, no font host, no analytics, no cookies.
+- **Zero Build Pipeline:** 100% standard ES modules, CSS variables, and HTML. No Node.js build step, bundler, or compilation needed.
+- **Self-Hosted & Private:** Zero third-party requests at runtime (no external CDNs, Google Fonts, or third-party trackers). All fonts and Three.js vendor scripts are self-hosted.
+- **Interactive 3D ID Badge:** Realistic, interactive security pass rendered in WebGL2 with Three.js (procedural canvas textures, woven lanyard ribbon, physics-damped tilt, drag, and flip), with an automated CSS container-query fallback for low-power or non-WebGL devices.
+- **Kinetic Motion & Micro-Interactions:** Custom Web Animations API (WAAPI) transitions, chapter curtain page wipes, interactive project deck slider with swipe gestures, and scroll-linked hero parallax.
+- **Resilient Progressive Enhancement:** Fully functional and readable with JavaScript disabled, reduced motion enabled, or low network conditions (`Save-Data`).
+- **Comprehensive SEO & Structured Data:** Semantic HTML5, Schema.org JSON-LD graph (`Person`, `ProfilePage`, `WebSite`, `BreadcrumbList`, `Credential`), OpenGraph/Twitter cards, `sitemap.xml`, and `robots.txt`.
+- **Print Optimized:** Complete `@media print` stylesheet transforming the interactive web page into an elegant, ATS-friendly black-and-white resume document.
 
-## Structure
+---
+
+## Project Structure
 
 ```
-index.html              the whole page
-robots.txt
-sitemap.xml
-CNAME                   buburtech.com
-assets/hero.mp4         hero background, muted (948 KB)
-assets/hero.webm        same clip, VP9 (691 KB)
-assets/hero-poster.jpg  LCP image and no-JS / reduced-motion fallback
-assets/og-image.jpg     1200×630 social card
-assets/badges/          Credly badge art, self-hosted
-assets/fonts/           JetBrains Mono woff2, latin subset
+resume/
+├── index.html                                 # Main single-page portfolio & resume
+├── design.md                                  # In-depth design system & architecture documentation
+├── README.md                                  # Project documentation
+├── CNAME                                      # Custom domain routing (buburtech.com)
+├── robots.txt                                 # Search crawler directives
+├── sitemap.xml                                # Search engine index sitemap
+├── assets/
+│   ├── portfolio.css                          # Core design system tokens, typography & layout
+│   ├── portfolio.js                           # Core module: theme switching & 3D badge coordinator
+│   ├── portfolio-motion.css                   # Styles for motion transitions, curtain & project deck
+│   ├── portfolio-motion.js                    # WAAPI animations, curtain navigation & project slider
+│   ├── id-card-3d.js                          # WebGL2 / Three.js 3D ID badge scene & interaction
+│   ├── case-studies.css                       # Dedicated stylesheet for case studies & breadcrumbs
+│   ├── favicon.png                            # 96x96 site icon
+│   ├── og-image.jpg                           # 1200x630 social preview card
+│   ├── badges/
+│   │   ├── comptia-cysa-plus.png              # Self-hosted CompTIA CySA+ badge art
+│   │   └── htb-cdsa.png                       # Self-hosted Hack The Box CDSA badge art
+│   ├── fonts/
+│   │   ├── barlow-condensed-extrabold.ttf     # Self-hosted Barlow Condensed 800
+│   │   ├── barlow-OFL.txt                     # Barlow Open Font License
+│   │   └── jetbrains-mono-latin.woff2         # Self-hosted JetBrains Mono (latin subset)
+│   ├── id-card/
+│   │   └── portrait.webp                      # Optimized portrait photo for the 3D ID card
+│   └── vendor/three/
+│       ├── LICENSE                            # Three.js MIT License
+│       └── build/
+│           ├── three.core.min.js              # Self-hosted Three.js core
+│           └── three.module.min.js            # Self-hosted Three.js ES module
+└── projects/
+    ├── index.html                             # Case studies index & overview
+    ├── bitdefender-endpoint-deployment/
+    │   └── index.html                         # Case study: 2,850 Endpoint Rollout at BPS
+    ├── multi-client-siem-operations/
+    │   └── index.html                         # Case study: Multi-Client SIEM & SOC Operations
+    └── splunk-detection-engineering/
+        └── index.html                         # Case study: Splunk Detection Engineering at DJBC
 ```
 
-## Editing
+---
 
-Everything is in `index.html`, in document order: hero → about → experience →
-projects → skills → certifications → education → contact. Adding a job means copying
-a `<li class="job">` block; the active role carries `class="job is-current"`.
+## Design System & Architecture
 
-Certification tiles link to their Credly `public_url`. To make the remaining two
-verifiable, copy the `<a class="cert">` pattern and paste the badge's share link.
+For complete architectural details, color palettes, typography scales, 3D graphics pipeline specs, and accessibility audits, see [design.md](file:///Users/bxdc8/project/resume/design.md).
 
-## Behaviour worth knowing
+---
 
-- **Hero video** ships with no `src`. After `window.load`, JS attaches the sources and
-  fades it in over the poster — and skips it entirely on `prefers-reduced-motion`,
-  Save-Data or 2G. The poster is always the LCP element.
-- **Theme** is dark by default, follows `prefers-color-scheme` on first visit, and a
-  manual choice persists in `localStorage`. Applied by a blocking script in `<head>`
-  so there is no flash of the wrong theme.
-- **Contrast** was audited across every text node in both themes: nothing below 4.5:1.
-- **Works with JavaScript off** — full content, poster instead of video, and the theme
-  toggle hides itself.
+## Local Development & Testing
+
+Since this project uses ES modules (`import`/`export`), it should be served via any local HTTP static server:
+
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# or Node.js npx serve
+npx serve .
+```
+
+Open `http://localhost:8000` in your browser.
+
+---
+
+## Deployment
+
+The site deploys automatically via **GitHub Pages** from the `main` branch. The `CNAME` file points to `buburtech.com` with `.nojekyll` enabled to prevent GitHub Pages from ignoring asset directories.
