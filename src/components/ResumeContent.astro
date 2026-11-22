@@ -1,0 +1,26 @@
+---
+import Projects from "./Projects.astro";
+import Experience from "./Experience.astro";
+import Qualifications from "./Qualifications.astro";
+import Education from "./Education.astro";
+import Contact from "./Contact.astro";
+interface Props {
+  resume?: boolean;
+}
+const { resume = false } = Astro.props;
+---
+
+{resume ? (
+  <>
+    <Experience />
+    <Projects />
+  </>
+) : (
+  <>
+    <Projects />
+    <Experience />
+  </>
+)}
+<Qualifications />
+<Education />
+<Contact />

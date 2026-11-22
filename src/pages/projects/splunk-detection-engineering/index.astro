@@ -1,0 +1,107 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://buburtech.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Projects",
+        item: "https://buburtech.com/projects/",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Splunk detection engineering",
+        item: "https://buburtech.com/projects/splunk-detection-engineering/",
+      },
+    ],
+  },
+];
+---
+
+<SiteLayout
+  title="Splunk Detection Engineering and SOC Tuning | Rifqi Rofian Tanamas"
+  description="Splunk detection engineering case study. Rifqi Rofian Tanamas advised on dashboards, detection tuning and Python automation for Indonesia\u2019s customs SOC."
+  canonical="https://buburtech.com/projects/splunk-detection-engineering/"
+  schema={schema}
+>
+  <header class="case-intro">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li aria-current="page">Splunk detection engineering</li>
+        </ol>
+      </nav>
+      <h1>Splunk detection engineering</h1>
+      <p class="case-lead">
+        During a SOC implementation for Indonesia’s customs agency, I advised on
+        Splunk dashboards, detection use cases, and Python automation.
+      </p>
+    </div>
+  </header>
+  <div class="case-detail wrap">
+    <dl class="case-facts">
+      <div>
+        <dt>Client</dt>
+        <dd>Directorate General of Customs and Excise (DJBC)</dd>
+      </div>
+      <div>
+        <dt>Role</dt>
+        <dd>Technical Advisor</dd>
+      </div>
+      <div>
+        <dt>Period</dt>
+        <dd>
+          <time datetime="2025">2025</time>–<time datetime="2026">2026</time>
+        </dd>
+      </div>
+      <div>
+        <dt>Detection outcome</dt>
+        <dd>90% fewer false positives</dd>
+      </div>
+    </dl>
+    <div class="case-copy">
+      <section aria-labelledby="detections">
+        <h2 id="detections">Dashboards and detections</h2>
+        <p>
+          I advised on the Splunk dashboards and detection use cases analysts
+          would use for alert triage. Tuning those use cases reduced the number
+          of false positives they had to review.
+        </p>
+      </section>
+      <section aria-labelledby="automation">
+        <h2 id="automation">Automation and audit readiness</h2>
+        <p>
+          I also advised on Python automation scripts for the SOC. The
+          implementation supported the agency’s audit preparation.
+        </p>
+      </section>
+      <section aria-labelledby="related">
+        <h2 id="related">Related project</h2>
+        <p>
+          My{" "}
+          <a href="/projects/multi-client-siem-operations/">
+            multi-client SIEM operations work
+          </a>{" "}
+          covers how I triaged alerts and documented classification standards
+          across three managed environments.
+        </p>
+      </section>
+    </div>
+  </div>
+</SiteLayout>

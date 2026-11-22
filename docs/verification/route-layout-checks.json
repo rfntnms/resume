@@ -1,0 +1,62 @@
+[
+  {
+    "h1": 1,
+    "path": "/projects/",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "h1": 1,
+    "path": "/projects/bitdefender-endpoint-deployment/",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "h1": 1,
+    "path": "/projects/splunk-detection-engineering/",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "h1": 1,
+    "path": "/projects/multi-client-siem-operations/",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "h1": 1,
+    "path": "/resume/",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "h1": 1,
+    "path": "/projects/",
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "h1": 1,
+    "path": "/projects/bitdefender-endpoint-deployment/",
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "h1": 1,
+    "path": "/projects/splunk-detection-engineering/",
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "h1": 1,
+    "path": "/projects/multi-client-siem-operations/",
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "h1": 1,
+    "path": "/resume/",
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

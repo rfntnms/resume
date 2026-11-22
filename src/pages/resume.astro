@@ -1,0 +1,44 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ResumeContent from "../components/ResumeContent.astro";
+---
+
+<SiteLayout
+  title="Resume | Rifqi Rofian Tanamas — L2 Security Analyst"
+  description="Resume of Rifqi Rofian Tanamas: L2 SOC analysis, threat hunting, detection engineering, incident response, and security automation."
+  canonical="https://buburtech.com/resume/"
+  resume
+>
+  <header class="resume-intro wrap">
+    <p class="eyebrow">Professional resume</p>
+    <h1>Rifqi Rofian Tanamas</h1>
+    <p class="resume-role">L2 Security Analyst · ITSEC Asia</p>
+    <p>
+      I investigate escalated security incidents, hunt for threats in IBM
+      QRadar, and tune Splunk detections for SOC teams.
+    </p>
+    <p>
+      Tangerang, Indonesia (UTC+7) · Open to relocation · Visa sponsorship
+      required
+    </p>
+    <p>
+      <a href="mailto:rifqirofian@gmail.com">rifqirofian@gmail.com</a> ·{" "}
+      <a href="https://www.linkedin.com/in/rifqirofian">
+        linkedin.com/in/rifqirofian
+      </a>{" "}
+      · <a href="https://buburtech.com">buburtech.com</a>
+    </p>
+    <div class="resume-actions">
+      <a class="button" href="/resume.pdf" download>
+        Download PDF
+      </a>
+      <button class="button print-resume" type="button" hidden>
+        Print / save PDF
+      </button>
+      <a class="text-link" href="/">
+        Back to portfolio
+      </a>
+    </div>
+  </header>
+  <ResumeContent resume />
+</SiteLayout>

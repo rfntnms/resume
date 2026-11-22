@@ -1,0 +1,147 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ResumeContent from "../components/ResumeContent.astro";
+import BadgeTexture from "../components/BadgeTexture.astro";
+import schema from "../data/profile-schema.json";
+const outcomes = [
+  {
+    value: "90%",
+    label: "fewer false positives",
+    context: "Splunk detection tuning",
+    href: "/projects/splunk-detection-engineering/",
+  },
+  {
+    value: "70%",
+    label: "increase in blocking accuracy",
+    context: "Python automation",
+    href: "/#experience",
+  },
+  {
+    value: "2,850",
+    label: "endpoints deployed",
+    context: "Bitdefender rollout for BPS",
+    href: "/projects/bitdefender-endpoint-deployment/",
+  },
+];
+---
+
+<SiteLayout
+  title="Rifqi Rofian Tanamas | L2 SOC & Cybersecurity Analyst"
+  description="L2 SOC analyst in Indonesia with 3+ years in cybersecurity, including QRadar threat hunting, Splunk detection tuning, and incident response. Open to relocation."
+  canonical="https://buburtech.com/"
+  schema={schema}
+>
+  <div class="intro">
+    <header class="hero wrap" id="about">
+      <div class="hero-copy">
+        <p class="eyebrow hero-role">
+          L2 Security Analyst <span>·</span> ITSEC Asia
+        </p>
+        <h1>
+          Rifqi Rofian <span>Tanamas</span>
+        </h1>
+        <p class="hero-specialties">
+          Threat hunting. Detection engineering.
+          <br class="desktop-break" /> Incident response.
+        </p>
+        <p class="hero-summary">
+          I investigate escalated security incidents, hunt for threats in IBM
+          QRadar, and tune Splunk detections for SOC teams.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#projects">
+            View selected work{" "}
+            <img
+              src="/assets/icons/arrow-right.svg"
+              width="24"
+              height="24"
+              alt=""
+            />
+          </a>
+          <a
+            class="text-link"
+            href="mailto:rifqirofian@gmail.com?subject=Security%20role%20opportunity"
+          >
+            Contact
+          </a>
+        </div>
+        <div class="hero-meta">
+          <p>Tangerang, Indonesia (UTC+7)</p>
+          <p>Open to relocation · Visa sponsorship required</p>
+        </div>
+      </div>
+      <figure class="id-card" id="id-card">
+        <div class="badge-stage">
+          <img
+            class="badge-poster"
+            src="/assets/id-card/credential-studio.webp"
+            srcset="/assets/id-card/credential-studio-small.webp 503w, /assets/id-card/credential-studio.webp 839w"
+            sizes="(max-width: 760px) 330px, (max-width: 1100px) 42vw, 580px"
+            width="839"
+            height="1000"
+            fetchpriority="high"
+            alt="Cream buburtech portfolio credential with an apricot woven lanyard and metal clip"
+          />
+          <canvas
+            width="600"
+            height="700"
+            aria-label="Interactive portfolio credential"
+            hidden
+          ></canvas>
+          <div class="badge-texture-source" hidden aria-hidden="true">
+            <BadgeTexture />
+          </div>
+        </div>
+        <figcaption class="id-caption">
+          <span>Portfolio ID / 01</span>
+          <div class="badge-controls">
+            <button
+              class="inspect-badge"
+              type="button"
+              aria-pressed="false"
+              hidden
+            >
+              Inspect in 3D
+            </button>
+            <button class="flip-card" type="button" aria-pressed="false" hidden>
+              Flip card
+            </button>
+          </div>
+        </figcaption>
+        <span
+          class="badge-status visually-hidden"
+          role="status"
+          aria-live="polite"
+        ></span>
+      </figure>
+    </header>
+  </div>
+  <section class="impact-section" aria-labelledby="impact-title">
+    <div class="wrap">
+      <div class="section-label">
+        <h2 id="impact-title">Selected career outcomes</h2>
+        <span></span>
+      </div>
+      <dl class="impact">
+        {outcomes.map((item) => (
+          <div>
+            <dt>{item.value}</dt>
+            <dd>
+              <strong>{item.label}</strong>
+              <a href={item.href}>
+                {item.context}
+                <img
+                  src="/assets/icons/arrow-right.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+  <ResumeContent />
+</SiteLayout>

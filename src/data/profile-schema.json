@@ -1,0 +1,78 @@
+
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://buburtech.com/#website",
+        "url": "https://buburtech.com/",
+        "name": "Buburtech",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://buburtech.com/#profile",
+        "url": "https://buburtech.com/",
+        "name": "Rifqi Rofian Tanamas | L2 SOC & Cybersecurity Analyst",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://buburtech.com/#website" },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://buburtech.com/#person",
+          "name": "Rifqi Rofian Tanamas",
+          "jobTitle": "L2 Security Analyst",
+          "description": "Cybersecurity analyst in Indonesia with 3+ years of experience in SOC monitoring, incident response, threat hunting, detection engineering, and security automation.",
+          "url": "https://buburtech.com/",
+          "email": "mailto:rifqirofian@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Banten",
+            "addressCountry": "ID"
+          },
+          "worksFor": { "@type": "Organization", "name": "ITSEC Asia" },
+          "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Nusa Mandiri University" },
+            { "@type": "CollegeOrUniversity", "name": "Bina Sarana Informatika University" }
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Hack The Box Certified Defensive Security Analyst (CDSA)",
+              "credentialCategory": "certificate",
+              "url": "https://www.credly.com/badges/286eade6-f054-4b3e-bd73-b11e386a72eb/public_url",
+              "recognizedBy": { "@type": "Organization", "name": "Hack The Box" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "CompTIA Cybersecurity Analyst (CySA+)",
+              "credentialCategory": "certificate",
+              "url": "https://www.credly.com/badges/406a7a89-2635-42eb-b5b5-c48be0ca17bc/public_url",
+              "recognizedBy": { "@type": "Organization", "name": "CompTIA" }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Certified AppSec Practitioner (CAP)",
+              "credentialCategory": "certificate",
+              "recognizedBy": { "@type": "Organization", "name": "The SecOps Group" }
+            }
+          ],
+          "knowsAbout": [
+            "Cybersecurity",
+            "Security Operations Center (SOC)",
+            "Security Information and Event Management (SIEM)",
+            "IBM QRadar",
+            "Splunk",
+            "Python",
+            "Incident Response",
+            "Threat Hunting",
+            "Detection Engineering",
+            "Endpoint Detection and Response (EDR)",
+            "Security Automation"
+          ],
+          "knowsLanguage": ["id", "en"],
+          "sameAs": ["https://www.linkedin.com/in/rifqirofian"]
+        }
+      }
+    ]
+  }

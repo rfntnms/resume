@@ -1,90 +1,62 @@
-# Rifqi Rofian Tanamas — L2 Security Analyst Portfolio
+# Buburtech — Precision Credential
 
-High-performance, editorial cybersecurity portfolio and case studies site. Built with vanilla HTML, modern modular CSS, and vanilla ES modules — zero build step, zero framework, zero external runtime dependencies.
+International recruiter-facing portfolio for Rifqi Rofian Tanamas. Astro generates static HTML for the homepage, three case studies, project index, and a dedicated resume. Runtime assets are self-hosted; React is not shipped because the current interactions use small native modules.
 
-**Live:** [buburtech.com](https://buburtech.com)
+## Local preview
 
----
+Use Node.js 22.23.4 or newer (Node 24 recommended), npm and Python 3 for the contract checks.
 
-## Technical Highlights
-
-- **Zero Build Pipeline:** 100% standard ES modules, CSS variables, and HTML. No Node.js build step, bundler, or compilation needed.
-- **Self-Hosted & Private:** Zero third-party requests at runtime (no external CDNs, Google Fonts, or third-party trackers). All fonts and Three.js vendor scripts are self-hosted.
-- **Interactive 3D ID Badge:** Realistic, interactive security pass rendered in WebGL2 with Three.js (procedural canvas textures, woven lanyard ribbon, physics-damped tilt, drag, and flip), with an automated CSS container-query fallback for low-power or non-WebGL devices.
-- **Kinetic Motion & Micro-Interactions:** Custom Web Animations API (WAAPI) transitions, chapter curtain page wipes, interactive project deck slider with swipe gestures, and scroll-linked hero parallax.
-- **Resilient Progressive Enhancement:** Fully functional and readable with JavaScript disabled, reduced motion enabled, or low network conditions (`Save-Data`).
-- **Comprehensive SEO & Structured Data:** Semantic HTML5, Schema.org JSON-LD graph (`Person`, `ProfilePage`, `WebSite`, `BreadcrumbList`, `Credential`), OpenGraph/Twitter cards, `sitemap.xml`, and `robots.txt`.
-- **Print Optimized:** Complete `@media print` stylesheet transforming the interactive web page into an elegant, ATS-friendly black-and-white resume document.
-
----
-
-## Project Structure
-
-```
-resume/
-├── index.html                                 # Main single-page portfolio & resume
-├── design.md                                  # In-depth design system & architecture documentation
-├── README.md                                  # Project documentation
-├── CNAME                                      # Custom domain routing (buburtech.com)
-├── robots.txt                                 # Search crawler directives
-├── sitemap.xml                                # Search engine index sitemap
-├── assets/
-│   ├── portfolio.css                          # Core design system tokens, typography & layout
-│   ├── portfolio.js                           # Core module: theme switching & 3D badge coordinator
-│   ├── portfolio-motion.css                   # Styles for motion transitions, curtain & project deck
-│   ├── portfolio-motion.js                    # WAAPI animations, curtain navigation & project slider
-│   ├── id-card-3d.js                          # WebGL2 / Three.js 3D ID badge scene & interaction
-│   ├── case-studies.css                       # Dedicated stylesheet for case studies & breadcrumbs
-│   ├── favicon.png                            # 96x96 site icon
-│   ├── og-image.jpg                           # 1200x630 social preview card
-│   ├── badges/
-│   │   ├── comptia-cysa-plus.png              # Self-hosted CompTIA CySA+ badge art
-│   │   └── htb-cdsa.png                       # Self-hosted Hack The Box CDSA badge art
-│   ├── fonts/
-│   │   ├── barlow-condensed-extrabold.ttf     # Self-hosted Barlow Condensed 800
-│   │   ├── barlow-OFL.txt                     # Barlow Open Font License
-│   │   └── jetbrains-mono-latin.woff2         # Self-hosted JetBrains Mono (latin subset)
-│   ├── id-card/
-│   │   └── portrait.webp                      # Optimized portrait photo for the 3D ID card
-│   └── vendor/three/
-│       ├── LICENSE                            # Three.js MIT License
-│       └── build/
-│           ├── three.core.min.js              # Self-hosted Three.js core
-│           └── three.module.min.js            # Self-hosted Three.js ES module
-└── projects/
-    ├── index.html                             # Case studies index & overview
-    ├── bitdefender-endpoint-deployment/
-    │   └── index.html                         # Case study: 2,850 Endpoint Rollout at BPS
-    ├── multi-client-siem-operations/
-    │   └── index.html                         # Case study: Multi-Client SIEM & SOC Operations
-    └── splunk-detection-engineering/
-        └── index.html                         # Case study: Splunk Detection Engineering at DJBC
+```sh
+npm ci
+npm run build
+npm test
+npm run preview -- --host 127.0.0.1 --port 4321
 ```
 
----
+For live editing use `npm run dev`. The publishable directory is `dist/`, not the repository root. There is no backend or external font/analytics service.
 
-## Design System & Architecture
+## Content and architecture
 
-For complete architectural details, color palettes, typography scales, 3D graphics pipeline specs, and accessibility audits, see [design.md](file:///Users/bxdc8/project/resume/design.md).
+- `src/layouts/SiteLayout.astro`: metadata, schema, navigation, theme and global page shell.
+- `src/pages/index.astro`: recruiter summary, studio badge and outcome links.
+- `src/components/{Experience,Projects,Qualifications,Education,Contact}.astro`: original authored resume facts shared between homepage and `/resume/`.
+- `src/pages/projects/`: existing case-study narratives and URLs.
+- `src/data/profile-schema.json`: structured profile; update it when the corresponding visible identity/credentials change.
+- `src/styles/portfolio.css`: design tokens, responsive layouts, reduced-motion and print rules.
+- `public/assets/site.js`: theme, native dialog, print action and opt-in 3D loading.
+- `public/assets/id-card-3d.js`: retained original procedural Three.js scene; imported only after Inspect in 3D.
+- `public/assets/id-card/credential-studio*.webp`: generated studio artwork, responsive alpha WebP; source PNG lives in `docs/design-assets/`.
+- `public/`: deployed static files, including CNAME, robots, sitemap and the exported resume PDF.
 
----
+All three project summaries are visible. Navigation uses native URLs/anchors; there are no curtain transitions, autoplay, scroll hijacking or carousel. JavaScript is optional for reading content and following links. Without JS, mobile navigation remains exposed, while enhancement-only controls remain hidden.
 
-## Local Development & Testing
+The studio artwork is a designed physical credential, not a photograph of an employer-issued ID. The interactive 3D view reuses the original procedural model and has a different strap pose. Reduced motion, Save-Data, unavailable WebGL or loading/context errors retain the studio image. Core resume information stays in HTML.
 
-Since this project uses ES modules (`import`/`export`), it should be served via any local HTTP static server:
+## Resume export
 
-```bash
-# Python 3
-python3 -m http.server 8000
+The resume HTML shares source components with the homepage. Export the PDF again whenever facts or print styles change. The website build itself does not require a PDF engine; the checked-in PDF is a generated deliverable.
 
-# or Node.js npx serve
-npx serve .
+Install Pango and the optional Python packages in `tools/requirements-print.txt`. On macOS, `brew install pango`; use a project virtual environment for Python dependencies. Some macOS environments need `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` when running the renderer.
+
+```sh
+npm run build
+python3 scripts/export-resume.py
+python3 scripts/export-resume.py --size Letter --output work/resume-Letter.pdf
+python3 tests/check_print.py public/resume.pdf work/resume-Letter.pdf
+npm run build
+npm test
 ```
 
-Open `http://localhost:8000` in your browser.
+The exporter uses the built HTML, local assets and the same print stylesheet; it makes no external asset requests. A4 and US Letter were rendered and text-checked in two pages. This does not guarantee compatibility with every ATS or every browser's print engine.
 
----
+## Checks
 
-## Deployment
+`npm test` checks preserved source facts in both HTML views, route/anchor/asset integrity, canonical metadata and JSON-LD parsing, plus the reduced-motion/Save-Data/WebGL policy. `tests/fixtures/content-baseline.json` is a migration snapshot, not the content authoring source; update it deliberately when the owner changes facts. Visual and interaction evidence is recorded in `design-qa.md` and `verification.md`.
 
-The site deploys automatically via **GitHub Pages** from the `main` branch. The `CNAME` file points to `buburtech.com` with `.nojekyll` enabled to prevent GitHub Pages from ignoring asset directories.
+## Publishing
+
+The Astro migration is published through **GitHub Actions**, using the built `dist/` directory rather than branch-root files. Review and merge the redesign first, then manually dispatch `.github/workflows/pages.yml` on `main` when release is authorized. Pull requests only build/test; the workflow does not publish on push. Custom domain remains `buburtech.com` via `public/CNAME`.
+
+Rollback: deploy the prior zero-build revision using its previous Pages source configuration. Do not deploy the Astro source directory as static output.
+
+Font and Three.js licenses remain alongside their assets. Tabler icon SVGs are vendored with their MIT license in `public/assets/icons/`.

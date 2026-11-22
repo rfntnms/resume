@@ -1,0 +1,22 @@
+{
+  "name": "buburtech-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --test tests/*.test.mjs && python3 -m unittest discover -s tests -v"
+  },
+  "dependencies": {
+    "astro": "7.4.13"
+  },
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "devDependencies": {
+    "prettier": "3.10.1",
+    "prettier-plugin-astro": "1.1.2"
+  }
+}

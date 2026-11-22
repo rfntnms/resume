@@ -1,0 +1,108 @@
+{
+  "jobs": [
+    "Feb 2026 – Present Jakarta, Indonesia L2 Security Analyst ITSEC Asia Investigate and triage incidents escalated by L1 analysts for a banking client. Hunt for suspicious activity in QRadar and support incident detection and response. Built an AI agent to assist security analysis and threat hunting. QRadar · Trend Micro · CyberInt",
+    "Jul 2024 – Jan 2026 Jakarta, Indonesia Lead Technical (Cybersecurity) Focus Solusi Infotama Led and mentored seven L1 SOC analysts and handled complex incidents as an L2 escalation point. Tuned Splunk dashboards and detections, reducing false positives by 90%. Built Python tooling with layered filtering that increased blocking accuracy by 70% and reduced analyst error. Managed four engineers on a 2,850-endpoint Bitdefender rollout and coordinated delivery between vendors and clients. Splunk · Python · CrowdStrike · ExtraHop · Ixia ThreatArmor · Bitdefender · Jira",
+    "Apr 2024 – Jun 2024 Tangerang Selatan, Indonesia IT Security Engineer CIMB Niaga Finance Operated endpoint security platforms and handled threat troubleshooting and updates. Reviewed privileged access anomalies in CyberArk and supported VPN and Active Directory operations. SentinelOne · Kaspersky · PandaSecurity · CyberArk · Active Directory · VPN",
+    "Jun 2023 – Apr 2024 Jakarta, Indonesia Cybersecurity Engineer Alpha Citra Siber Indonesia Triaged about 20 security incidents per week across three client environments on a 24/7 SOC rotation. Improved detection logic and SIEM configurations and wrote Splunk implementation documentation. Splunk · QRadar · Wazuh",
+    "Jul 2019 – Jun 2023 Tangerang, Indonesia IT Support Technician Universitas Multimedia Nusantara Delivered desktop support and maintenance for faculty and staff, including peripherals and antivirus updates. Managed user accounts and credentials under university security policies. Desktop support · Antivirus · Account management"
+  ],
+  "skills": [
+    "SIEM Splunk, QRadar, Wazuh",
+    "Endpoint security SentinelOne, CrowdStrike, Bitdefender, Trend Micro, Kaspersky, PandaSecurity",
+    "Threat intelligence CyberInt",
+    "Automation Python, Bash, AI-assisted security analysis, Git",
+    "Identity and access Active Directory, CyberArk, BeyondTrust, VPN",
+    "SOC operations IDS/IPS, incident response coordination, team leadership, Jira, Excel"
+  ],
+  "credentials": [
+    "Certified Defensive Security Analyst (CDSA) Hack The Box · Aug 2026",
+    "Cybersecurity Analyst (CySA+) CompTIA · May 2025",
+    "Certified AppSec Practitioner The SecOps Group · Feb 2024",
+    "Linux System Administration ADINUSA"
+  ],
+  "education": [
+    "Nusa Mandiri University Bachelor’s in Information Systems 2021–2023 · GPA 3.67 / 4.00",
+    "Bina Sarana Informatika University Associate degree in Information Systems 2018–2021 · GPA 3.72 / 4.00"
+  ],
+  "projects": [
+    "Project Lead · 2024 Antivirus deployment for BPS Statistics Indonesia Led a four-person team through the Bitdefender rollout, delivered to the service-level agreement, and trained the client team to run the platform after handover. 2,850 endpoints deployed",
+    "Technical Advisor · 2025–2026 SOC implementation for DJBC Indonesia’s Directorate General of Customs and Excise Advised on Python automation and Splunk dashboards. Detection tuning reduced false positives by 90% and supported audit readiness.",
+    "SOC L1 Analyst · 2023–2024 Multi-client SIEM operations Alpha Citra Siber Indonesia Triaged about 20 incidents per week across three managed clients and documented alert classification standards for use across analysts and shifts."
+  ],
+  "contact": [
+    "I’m open to international L2 SOC analyst, detection engineering, and incident response roles. I’m based in Tangerang, Indonesia, and require visa sponsorship to relocate.",
+    "Indonesian (native) · English (intermediate)"
+  ],
+  "anchors": [
+    "top",
+    "main",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "certifications",
+    "education",
+    "contact"
+  ],
+  "routes": [
+    "/",
+    "/projects/",
+    "/projects/bitdefender-endpoint-deployment/",
+    "/projects/splunk-detection-engineering/",
+    "/projects/multi-client-siem-operations/"
+  ],
+  "caseNarratives": {
+    "/projects/": [
+      "Cybersecurity projects",
+      "Three projects from my work in security operations, detection engineering, and endpoint security.",
+      "Bitdefender endpoint deployment",
+      "I led a four-person team that deployed Bitdefender to 2,850 endpoints at Statistics Indonesia and trained the client team before handover.",
+      "Splunk detection engineering",
+      "I advised Indonesia’s customs agency on Splunk dashboards, use cases, and Python automation. The detection tuning cut false positives by 90%.",
+      "Multi-client SIEM operations",
+      "I triaged about 20 incidents per week across three managed clients and documented how analysts classified alerts across shifts."
+    ],
+    "/projects/bitdefender-endpoint-deployment/": [
+      "Bitdefender endpoint deployment",
+      "I led a four-person implementation team through a Bitdefender antivirus rollout to 2,850 endpoints at Statistics Indonesia.",
+      "Badan Pusat Statistik (Statistics Indonesia)",
+      "Project Lead",
+      "2024",
+      "2,850 endpoints",
+      "Rollout and coordination",
+      "At Focus Solusi Infotama, I managed the Bitdefender implementation at the national statistics agency and kept delivery within the agreed service level.",
+      "Training and handover",
+      "The handover included hands-on training in the Bitdefender console so the client team could operate the platform after the implementation team left.",
+      "Related project",
+      "I also advised on SIEM dashboards and alert tuning in the Splunk detection engineering case study for Indonesia’s customs agency."
+    ],
+    "/projects/splunk-detection-engineering/": [
+      "Splunk detection engineering",
+      "During a SOC implementation for Indonesia’s customs agency, I advised on Splunk dashboards, detection use cases, and Python automation.",
+      "Directorate General of Customs and Excise (DJBC)",
+      "Technical Advisor",
+      "2025 – 2026",
+      "90% fewer false positives",
+      "Dashboards and detections",
+      "I advised on the Splunk dashboards and detection use cases analysts would use for alert triage. Tuning those use cases reduced the number of false positives they had to review.",
+      "Automation and audit readiness",
+      "I also advised on Python automation scripts for the SOC. The implementation supported the agency’s audit preparation.",
+      "Related project",
+      "My multi-client SIEM operations work covers how I triaged alerts and documented classification standards across three managed environments."
+    ],
+    "/projects/multi-client-siem-operations/": [
+      "Multi-client SIEM operations",
+      "At Alpha Citra Siber Indonesia, I triaged about 20 security incidents per week across three managed clients on a rotating 24/7 SOC shift.",
+      "Alpha Citra Siber Indonesia",
+      "L1 SOC Analyst",
+      "2023 – 2024",
+      "Splunk, IBM QRadar, Wazuh",
+      "Incident triage",
+      "I used Splunk, IBM QRadar, and Wazuh to monitor and triage security incidents across separate client environments. I helped tune detection logic and SIEM settings to improve alert accuracy and reduce unnecessary escalations.",
+      "Alert classification and documentation",
+      "I documented the team’s alert classification standards so analysts could apply them consistently across shifts. I also contributed technical documentation for Splunk implementation.",
+      "Related project",
+      "See the Splunk detection engineering case study for my later work on dashboard and detection tuning for a government SOC."
+    ]
+  }
+}
