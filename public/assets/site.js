@@ -110,7 +110,7 @@ if (card) {
           antialias: true,
         });
         if (!context) throw new Error("WebGL unavailable");
-        const { createBadgeScene } = await import("./id-card-3d.js");
+        const { createBadgeScene } = await import("./id-card-3d.js?v=portrait-1");
         const portrait = card.querySelector("#badge-portrait");
         portrait.loading = "eager";
         portrait.src = portrait.dataset.src;

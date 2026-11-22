@@ -46,4 +46,8 @@ No screen-reader session, real-device matrix or actual browser zoom 200%/400% te
 - [x] Primary interactions and browser console checked.
 - [x] Remaining test gaps and P3 differences stated.
 
+## Portrait update — 22 November 2026
+
+The owner supplied Foto ID Card_Original.JPG and requested the real portrait in place of RRT. Default desktop/mobile posters now use credential-portrait WebP assets; the existing cream badge, typography, lanyard and composition remain. The 3D texture is the original photograph resized/encoded to portrait-rifqi.webp, with upper-biased cover cropping so hair and chin remain visible. Both views were rendered locally; the photo loaded, 3D activation completed, and no console errors were observed. No unrelated layout/content changes. Source JPEG in Downloads was not modified.
+
 final result: passed

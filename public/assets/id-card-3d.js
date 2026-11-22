@@ -48,7 +48,8 @@ function croppedPhoto(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
   const cropWidth = width / scale;
   const cropHeight = height / scale;
-  ctx.drawImage(image, (image.naturalWidth - cropWidth) / 2, (image.naturalHeight - cropHeight) / 2,
+  // Keep the original portrait's hair and chin in the landscape badge window.
+  ctx.drawImage(image, (image.naturalWidth - cropWidth) / 2, (image.naturalHeight - cropHeight) * .12,
     cropWidth, cropHeight, x, y, width, height);
 }
 

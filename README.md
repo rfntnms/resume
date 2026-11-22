@@ -25,7 +25,7 @@ For live editing use `npm run dev`. The publishable directory is `dist/`, not th
 - `src/styles/portfolio.css`: design tokens, responsive layouts, reduced-motion and print rules.
 - `public/assets/site.js`: theme, native dialog, print action and opt-in 3D loading.
 - `public/assets/id-card-3d.js`: retained original procedural Three.js scene; imported only after Inspect in 3D.
-- `public/assets/id-card/credential-studio*.webp`: generated studio artwork, responsive alpha WebP; source PNG lives in `docs/design-assets/`.
+- `public/assets/id-card/credential-portrait*.webp`: generated studio artwork, responsive alpha WebP; source PNG lives in `docs/design-assets/`. The 3D texture uses the owner-supplied photograph in `portrait-rifqi.webp`.
 - `public/`: deployed static files, including CNAME, robots, sitemap and the exported resume PDF.
 
 All three project summaries are visible. Navigation uses native URLs/anchors; there are no curtain transitions, autoplay, scroll hijacking or carousel. JavaScript is optional for reading content and following links. Without JS, mobile navigation remains exposed, while enhancement-only controls remain hidden.

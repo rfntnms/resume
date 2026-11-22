@@ -24,7 +24,7 @@ A cream band exposes 90% fewer false positives, 70% increase in blocking accurac
 
 ## Materials and motion
 
-Studio art: cream matte credential, dark green RRT monogram, woven apricot lanyard, brushed metal clip, soft contact shadow. Generated artwork is not represented as a real employer-issued badge. Responsive transparent WebP is the default image and fallback, with dimensions reserved before load. The optional procedural 3D model is preserved from v1 and intentionally has a different pose; it is not claimed to be a live rendering of the raster artwork.
+Studio art: cream matte credential, the owner-supplied portrait photograph, woven apricot lanyard, brushed metal clip, soft contact shadow. Studio badge artwork was edited using the owner-supplied photograph; it is not represented as a real employer-issued badge. The interactive 3D texture uses the optimized original source photograph. Responsive transparent WebP is the default image and fallback, with dimensions reserved before load. The optional procedural 3D model is preserved from v1 and intentionally has a different pose; it is not claimed to be a live rendering of the raster artwork.
 
 3D code loads on user request, never before core content. Reduced motion/Save-Data keeps the poster; load failure/context loss preserves it. Rendering is demand-based in the retained scene, and offscreen/hidden/preference changes return to the poster. Flip has a native button and status announcement. No scroll parallax, curtain, custom cursor, autoplay or carousel. Hover color changes are 160ms and disabled under reduced motion.
 
