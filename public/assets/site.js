@@ -1,10 +1,14 @@
 import { badgePolicy } from "./badge-policy.mjs";
 
 const root = document.documentElement;
+const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
 const dark = matchMedia("(prefers-color-scheme: dark)");
 const theme = document.querySelector(".theme-toggle");
-const currentTheme = () =>
-  root.dataset.theme || (dark.matches ? "dark" : "light");
+const currentTheme = () => {
+  const content = colorSchemeMeta?.content;
+  if (content === "light" || content === "dark") return content;
+  return dark.matches ? "dark" : "light";
+};
 function labelTheme() {
   const label = `Switch to ${currentTheme() === "dark" ? "light" : "dark"} mode`;
   theme.setAttribute("aria-label", label);
@@ -13,23 +17,39 @@ function labelTheme() {
 theme.hidden = false;
 labelTheme();
 theme.addEventListener("click", () => {
-  root.dataset.theme = currentTheme() === "dark" ? "light" : "dark";
+  const target = currentTheme() === "dark" ? "light" : "dark";
+  const system = dark.matches ? "dark" : "light";
+  const nextMeta = target === system ? "light dark" : target;
+  if (colorSchemeMeta) colorSchemeMeta.content = nextMeta;
   try {
-    localStorage.setItem("theme", root.dataset.theme);
+    if (target === system) {
+      localStorage.removeItem("color-scheme");
+    } else {
+      localStorage.setItem("color-scheme", target);
+    }
   } catch {}
   labelTheme();
 });
 dark.addEventListener("change", labelTheme);
+window.addEventListener("storage", (event) => {
+  if (event.key === "color-scheme" || event.key === null) {
+    const stored = event.newValue;
+    if (colorSchemeMeta) {
+      colorSchemeMeta.content =
+        stored === "light" || stored === "dark" ? stored : "light dark";
+    }
+    labelTheme();
+  }
+});
 
 const menu = document.querySelector("#chapter-menu");
 const openMenu = document.querySelector(".menu-toggle");
 if (typeof menu.showModal === "function") {
+  if (!("commandForElement" in HTMLButtonElement.prototype)) {
+    import("https://esm.run/invokers-polyfill");
+  }
   root.classList.add("nav-ready");
   openMenu.hidden = false;
-  openMenu.addEventListener("click", () => menu.showModal());
-  menu
-    .querySelector(".menu-close")
-    .addEventListener("click", () => menu.close());
   menu.querySelectorAll("a").forEach((link) =>
     link.addEventListener("click", () => {
       menu.close();

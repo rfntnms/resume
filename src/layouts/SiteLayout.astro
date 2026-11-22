@@ -26,6 +26,14 @@ const navigation = [
     <meta name="author" content="Rifqi Rofian Tanamas" />
     <meta name="robots" content="max-image-preview:large" />
     <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      try {
+        const scheme = localStorage.getItem("color-scheme");
+        if (scheme === "light" || scheme === "dark") {
+          document.querySelector('meta[name="color-scheme"]').content = scheme;
+        }
+      } catch {}
+    </script>
     <link rel="canonical" href={canonical} />
     <link
       rel="icon"
@@ -58,13 +66,6 @@ const navigation = [
       name="twitter:image"
       content="https://buburtech.com/assets/og-image.jpg"
     />
-    <script is:inline>
-      try {
-        const theme = localStorage.getItem("theme");
-        if (theme === "light" || theme === "dark")
-          document.documentElement.dataset.theme = theme;
-      } catch {}
-    </script>
     <link
       rel="preload"
       href="/assets/fonts/barlow-condensed-extrabold.woff2"
@@ -95,14 +96,8 @@ const navigation = [
           ))}
         </nav>
         <div class="header-actions">
-          <a class="resume-link" href="/resume/">
-            Resume{" "}
-            <img
-              src="/assets/icons/arrow-up-right.svg"
-              width="20"
-              height="20"
-              alt=""
-            />
+          <a class="resume-link icon-end" href="/resume/">
+            Resume
           </a>
           <button
             class="theme-toggle"
@@ -115,6 +110,8 @@ const navigation = [
           <button
             class="menu-toggle"
             type="button"
+            commandfor="chapter-menu"
+            command="show-modal"
             aria-haspopup="dialog"
             aria-controls="chapter-menu"
             hidden
@@ -132,7 +129,13 @@ const navigation = [
       <div class="menu-inner wrap">
         <div class="menu-header">
           <p id="chapter-menu-title">Browse portfolio</p>
-          <button class="menu-close" type="button" autofocus>
+          <button
+            class="menu-close"
+            type="button"
+            commandfor="chapter-menu"
+            command="close"
+            autofocus
+          >
             Close
           </button>
         </div>
